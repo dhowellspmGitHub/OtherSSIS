@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{D183A3D8-5FD8-494B-B014-37F57B35E655}") = "SSIS", "SSIS\SSIS.dtproj", "{8EE11969-9AE9-4005-B3A9-6B368E469CF3}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = $/AMS360_Agena/AMS360_Agena
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Team\u0020Foundation\u0020Server\u0020MSSCCI\u0020Provider
+		SccProjectUniqueName1 = SSIS\\SSIS.dtproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = SSIS\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EE11969-9AE9-4005-B3A9-6B368E469CF3}.Development|Default.ActiveCfg = Development
+		{8EE11969-9AE9-4005-B3A9-6B368E469CF3}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

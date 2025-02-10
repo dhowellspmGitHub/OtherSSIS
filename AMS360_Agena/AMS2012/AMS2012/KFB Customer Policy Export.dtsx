@@ -1,0 +1,3508 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/14/2009 12:41:25 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="DSTAS82"
+  DTS:CreatorName="KFBDOM1\clp2305"
+  DTS:DelayValidation="True"
+  DTS:DTSID="{B89374DE-357D-483E-B900-F854A0B7780E}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.6020.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="KFB Customer Policy Export"
+  DTS:PackageType="5"
+  DTS:VersionBuild="127"
+  DTS:VersionGUID="{6227B77F-CD04-48CD-93C0-10BCCB5446D7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Agency Export File]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{04EFDF7A-EE24-471C-81F1-3CE906367711}"
+      DTS:ObjectName="Agency Export File">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="RaggedRight"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\sscd223\agena\agency.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="10"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIMEMBNO"
+              DTS:DTSID="{1DD5584C-772E-4DCC-ABB2-9D7FF52E12C0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="51"
+              DTS:MaximumWidth="51"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIINSLNAME"
+              DTS:DTSID="{CB767956-5F6B-4D91-9959-DE14F486EE0E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="16"
+              DTS:MaximumWidth="16"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIINSFNAME"
+              DTS:DTSID="{3D5DC5E7-D58B-4F70-854C-24448C1D72F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="11"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIINSMNAME"
+              DTS:DTSID="{D941083A-F16A-4B47-80E6-EC6D9EC83943}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="30"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIINSNAME2"
+              DTS:DTSID="{E2DDEC2B-6B30-42FE-A134-936A16491DD9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="1"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:ObjectName="AGINAMETYPE"
+              DTS:DTSID="{F028D221-03F7-442C-818D-8678970FEB80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="30"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:ObjectName="AGISTREETADDRESS"
+              DTS:DTSID="{DA280CD2-A606-4DFB-B909-2CA46D0E0456}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="30"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIEXTRAADDRESS"
+              DTS:DTSID="{2EBAF38F-B245-4AD6-8A70-CA636FFC4BF4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="19"
+              DTS:MaximumWidth="19"
+              DTS:DataType="129"
+              DTS:ObjectName="AGITOWNSUBURB"
+              DTS:DTSID="{7738FD4D-5D16-4A11-AF9D-31942323F7A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="2"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:ObjectName="AGISTATEDESC"
+              DTS:DTSID="{D332DF9D-4DC7-4E8E-BC95-CDFFD731E2DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="9"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIPOSTCODE"
+              DTS:DTSID="{126BBACF-979D-4621-996A-BB6735B2AF21}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="25"
+              DTS:MaximumWidth="25"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIPOLICYNO"
+              DTS:DTSID="{658AF897-798B-4B0D-8B68-37EB3C0456F9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="15"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:ObjectName="AGILOBDESC"
+              DTS:DTSID="{4D175800-FCC5-4470-AB6F-CF1167B2A419}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="1"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIPOLICYSTATUS"
+              DTS:DTSID="{79B071D5-05C3-47C7-879E-BA56A9B9FBD3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="1"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIPOLICYRCFLAG"
+              DTS:DTSID="{4A07F1C0-C901-4ED6-AC71-A45572CC1BF6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="10"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIPOLICYEFFDT"
+              DTS:DTSID="{83DDA199-F81A-414B-84BE-3BECA72B655F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="10"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIPOLICYEXPDT"
+              DTS:DTSID="{E92601A1-A04D-42C9-988A-10B49D2EDA5C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="30"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIWRITINGCOMPANY"
+              DTS:DTSID="{B9C5A4B3-262B-4841-892A-DBF5661D6D97}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="51"
+              DTS:MaximumWidth="51"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIAGENTLNAME"
+              DTS:DTSID="{384E6940-E31D-4EC5-BAAD-D2959B5F4212}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="16"
+              DTS:MaximumWidth="16"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIAGENTFNAME"
+              DTS:DTSID="{E33DB6DA-DEC8-42E0-B560-54F9CC3644CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="11"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:ObjectName="AGIAGENTMNAME"
+              DTS:DTSID="{57A0615B-2B6E-488D-9423-39ADB25A71A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="129"
+              DTS:ObjectName="LASTCOLLINEFEED"
+              DTS:DTSID="{E7636AF8-EC6F-4196-9F48-6B8A26CE0ACA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Source_Database_Connection]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EE146C27-9580-4AC9-B062-C62D254EF633}"
+      DTS:ObjectName="Source_Database_Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=SDBS212\AMS2014;User ID=SSISSysAdmin;Initial Catalog=A1160987T;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-KFB Customer Policy Export-{EE146C27-9580-4AC9-B062-C62D254EF633}agenasql.AFW1.ssisuser;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsZAgB3YoyEGw0UEb5fo5iQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABiXMSYG/kcEffakW8f8FNGAAAAAASAAACgAAAAEAAAAHTOnMp9YPCDMTw1L2cHGJEgAAAAnC/LUOE5YVhWrKvGIqmknjLgkUJFA9rEn05gTzBdPlMUAAAAaRJOY4jr3un/SVDu1pCIC7gTkcQ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{98F6E3DA-BB27-44F8-9C7D-56DEB6241BB3}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          engineThreads="5"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Flat File Destination"
+              componentClassID="{8DA75FED-1B7C-407D-B2AD-2B24209CCCA4}"
+              contactInfo="Flat File Destination;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Agency Export File]"
+                  connectionManagerRefId="Package.ConnectionManagers[Agency Export File]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-MEMBNO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="NEW-AGI-MEMBNO"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIMEMBNO]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-MEMBNO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-INS-LNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="51"
+                      cachedName="NEW-AGI-INS-LNAME"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIINSLNAME]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-INS-LNAME]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-INS-FNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="NEW-AGI-INS-FNAME"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIINSFNAME]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-INS-FNAME]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-INS-MNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="NEW-AGI-INS-MNAME"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIINSMNAME]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-INS-MNAME]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-INS-NAME-2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="NEW-AGI-INS-NAME-2"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIINSNAME2]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-INS-NAME-2]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-NAME-TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="NEW-AGI-NAME-TYPE"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGINAMETYPE]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-NAME-TYPE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-STREET-ADDRESS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="NEW-AGI-STREET-ADDRESS"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGISTREETADDRESS]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-STREET-ADDRESS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-EXTRA-ADDRESS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="NEW-AGI-EXTRA-ADDRESS"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIEXTRAADDRESS]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-EXTRA-ADDRESS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-TOWN-SUBURB]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="19"
+                      cachedName="NEW-AGI-TOWN-SUBURB"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGITOWNSUBURB]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-TOWN-SUBURB]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-STATE-DESC]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="NEW-AGI-STATE-DESC"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGISTATEDESC]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-STATE-DESC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-POST-CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="NEW-AGI-POST-CODE"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIPOSTCODE]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POST-CODE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-POLICY-NO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="NEW-AGI-POLICY-NO"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIPOLICYNO]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-NO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-LOB-DESC]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="NEW-AGI-LOB-DESC"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGILOBDESC]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-LOB-DESC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-POLICY-RCFLAG]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="NEW-AGI-POLICY-RCFLAG"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIPOLICYRCFLAG]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-RCFLAG]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-POLICY-EFF-DT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="NEW-AGI-POLICY-EFF-DT"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIPOLICYEFFDT]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-EFF-DT]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-POLICY-EXP-DT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="NEW-AGI-POLICY-EXP-DT"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIPOLICYEXPDT]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-EXP-DT]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-WRITING-COMPANY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="NEW-AGI-WRITING-COMPANY"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIWRITINGCOMPANY]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-WRITING-COMPANY]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-AGENT-LNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="51"
+                      cachedName="NEW-AGI-AGENT-LNAME"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIAGENTLNAME]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-AGENT-LNAME]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-AGENT-FNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="NEW-AGI-AGENT-FNAME"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIAGENTFNAME]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-AGENT-FNAME]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-AGENT-MNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="NEW-AGI-AGENT-MNAME"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIAGENTMNAME]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-AGENT-MNAME]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[NEW-AGI-POLICY-STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="NEW-AGI-POLICY-STATUS"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIPOLICYSTATUS]"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-STATUS]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIMEMBNO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="AGIMEMBNO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIINSLNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="51"
+                      name="AGIINSLNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIINSFNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="AGIINSFNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIINSMNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="AGIINSMNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIINSNAME2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="AGIINSNAME2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGINAMETYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="AGINAMETYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGISTREETADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="AGISTREETADDRESS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIEXTRAADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="AGIEXTRAADDRESS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGITOWNSUBURB]"
+                      codePage="1252"
+                      dataType="str"
+                      length="19"
+                      name="AGITOWNSUBURB" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGISTATEDESC]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="AGISTATEDESC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIPOSTCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="AGIPOSTCODE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIPOLICYNO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="AGIPOLICYNO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGILOBDESC]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="AGILOBDESC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIPOLICYRCFLAG]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="AGIPOLICYRCFLAG" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIPOLICYEFFDT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="AGIPOLICYEFFDT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIPOLICYEXPDT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="AGIPOLICYEXPDT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIWRITINGCOMPANY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="AGIWRITINGCOMPANY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIAGENTLNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="51"
+                      name="AGIAGENTLNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIAGENTFNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="AGIAGENTFNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIAGENTMNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="AGIAGENTMNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LASTCOLLINEFEED]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="LASTCOLLINEFEED" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AGIPOLICYSTATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="AGIPOLICYSTATUS" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Source"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [AGI-MEMBNO]
+ ,[AGI-INS-LNAME]
+ ,left([AGI-INS-FNAME],16) as [AGI-INS-FNAME]
+ ,[AGI-INS-MNAME]
+ ,[AGI-INS-NAME-2]
+ ,[AGI-NAME-TYPE]
+ ,left([AGI-STREET-ADDRESS], 30) as [AGI-STREET-ADDRESS]
+ ,left([AGI-EXTRA-ADDRESS],30) as [AGI-EXTRA-ADDRESS]
+ ,left([AGI-TOWN-SUBURB],19) as [AGI-TOWN-SUBURB]
+ ,[AGI-STATE-DESC]
+ ,[AGI-POST-CODE]
+ ,[AGI-POLICY-NO]
+ ,left([AGI-LOB-DESC],15) as [AGI-LOB-DESC]
+ ,[AGI-POLICY-STATUS]
+ ,[AGI-POLICY-RCFLAG]
+ ,[AGI-POLICY-EFF-DT]
+ ,[AGI-POLICY-EXP-DT]
+ ,left([AGI-WRITING-COMPANY],30) as [AGI-WRITING-COMPANY]
+ ,[AGI-AGENT-LNAME]
+ ,[AGI-AGENT-FNAME]
+ ,[AGI-AGENT-MNAME]
+  FROM [A1160987D1].[dbo].[vw_CustomerPolicyExportWithMaxPolicy]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Source_Database_Connection]"
+                  connectionManagerRefId="Package.ConnectionManagers[Source_Database_Connection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-MEMBNO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-MEMBNO]"
+                      length="80"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-MEMBNO]"
+                      name="AGI-MEMBNO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-INS-LNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-INS-LNAME]"
+                      length="51"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-INS-LNAME]"
+                      name="AGI-INS-LNAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-INS-FNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-INS-FNAME]"
+                      length="16"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-INS-FNAME]"
+                      name="AGI-INS-FNAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-INS-MNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-INS-MNAME]"
+                      length="11"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-INS-MNAME]"
+                      name="AGI-INS-MNAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-INS-NAME-2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-INS-NAME-2]"
+                      length="60"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-INS-NAME-2]"
+                      name="AGI-INS-NAME-2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-NAME-TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-NAME-TYPE]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-NAME-TYPE]"
+                      name="AGI-NAME-TYPE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-STREET-ADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-STREET-ADDRESS]"
+                      length="30"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-STREET-ADDRESS]"
+                      name="AGI-STREET-ADDRESS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-EXTRA-ADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-EXTRA-ADDRESS]"
+                      length="30"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-EXTRA-ADDRESS]"
+                      name="AGI-EXTRA-ADDRESS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-TOWN-SUBURB]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-TOWN-SUBURB]"
+                      length="19"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-TOWN-SUBURB]"
+                      name="AGI-TOWN-SUBURB"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-STATE-DESC]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-STATE-DESC]"
+                      length="2"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-STATE-DESC]"
+                      name="AGI-STATE-DESC"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POST-CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-POST-CODE]"
+                      length="9"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POST-CODE]"
+                      name="AGI-POST-CODE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-NO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-POLICY-NO]"
+                      length="25"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-NO]"
+                      name="AGI-POLICY-NO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-LOB-DESC]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-LOB-DESC]"
+                      length="25"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-LOB-DESC]"
+                      name="AGI-LOB-DESC"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-RCFLAG]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-POLICY-RCFLAG]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-RCFLAG]"
+                      name="AGI-POLICY-RCFLAG"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-EFF-DT]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-POLICY-EFF-DT]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-EFF-DT]"
+                      name="AGI-POLICY-EFF-DT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-EXP-DT]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-POLICY-EXP-DT]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-EXP-DT]"
+                      name="AGI-POLICY-EXP-DT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-WRITING-COMPANY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-WRITING-COMPANY]"
+                      length="30"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-WRITING-COMPANY]"
+                      name="AGI-WRITING-COMPANY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-AGENT-LNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-AGENT-LNAME]"
+                      length="51"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-AGENT-LNAME]"
+                      name="AGI-AGENT-LNAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-AGENT-FNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-AGENT-FNAME]"
+                      length="16"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-AGENT-FNAME]"
+                      name="AGI-AGENT-FNAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-AGENT-MNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-AGENT-MNAME]"
+                      length="11"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-AGENT-MNAME]"
+                      name="AGI-AGENT-MNAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-POLICY-STATUS]"
+                      length="1"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-STATUS]"
+                      name="AGI-POLICY-STATUS"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-MEMBNO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="80"
+                      name="AGI-MEMBNO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-INS-LNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="51"
+                      name="AGI-INS-LNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-INS-FNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="AGI-INS-FNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-INS-MNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="AGI-INS-MNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-INS-NAME-2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="AGI-INS-NAME-2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-NAME-TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="AGI-NAME-TYPE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-STREET-ADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="AGI-STREET-ADDRESS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-EXTRA-ADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="AGI-EXTRA-ADDRESS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-TOWN-SUBURB]"
+                      codePage="1252"
+                      dataType="str"
+                      length="19"
+                      name="AGI-TOWN-SUBURB" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-STATE-DESC]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="AGI-STATE-DESC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-POST-CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="AGI-POST-CODE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-POLICY-NO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="AGI-POLICY-NO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-LOB-DESC]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="AGI-LOB-DESC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-POLICY-RCFLAG]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="AGI-POLICY-RCFLAG" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-POLICY-EFF-DT]"
+                      dataType="dbTimeStamp"
+                      name="AGI-POLICY-EFF-DT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-POLICY-EXP-DT]"
+                      dataType="dbTimeStamp"
+                      name="AGI-POLICY-EXP-DT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-WRITING-COMPANY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="AGI-WRITING-COMPANY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-AGENT-LNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="51"
+                      name="AGI-AGENT-LNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-AGENT-FNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="AGI-AGENT-FNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-AGENT-MNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="AGI-AGENT-MNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGI-POLICY-STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="AGI-POLICY-STATUS" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-MEMBNO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="80"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-MEMBNO]"
+                      name="AGI-MEMBNO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-INS-LNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="51"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-INS-LNAME]"
+                      name="AGI-INS-LNAME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-INS-FNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-INS-FNAME]"
+                      name="AGI-INS-FNAME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-INS-MNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-INS-MNAME]"
+                      name="AGI-INS-MNAME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-INS-NAME-2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-INS-NAME-2]"
+                      name="AGI-INS-NAME-2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-NAME-TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-NAME-TYPE]"
+                      name="AGI-NAME-TYPE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-STREET-ADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-STREET-ADDRESS]"
+                      name="AGI-STREET-ADDRESS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-EXTRA-ADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-EXTRA-ADDRESS]"
+                      name="AGI-EXTRA-ADDRESS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-TOWN-SUBURB]"
+                      codePage="1252"
+                      dataType="str"
+                      length="19"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-TOWN-SUBURB]"
+                      name="AGI-TOWN-SUBURB" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-STATE-DESC]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-STATE-DESC]"
+                      name="AGI-STATE-DESC" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-POST-CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-POST-CODE]"
+                      name="AGI-POST-CODE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-POLICY-NO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-POLICY-NO]"
+                      name="AGI-POLICY-NO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-LOB-DESC]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-LOB-DESC]"
+                      name="AGI-LOB-DESC" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-POLICY-STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-POLICY-STATUS]"
+                      name="AGI-POLICY-STATUS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-POLICY-RCFLAG]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-POLICY-RCFLAG]"
+                      name="AGI-POLICY-RCFLAG" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-POLICY-EFF-DT]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-POLICY-EFF-DT]"
+                      name="AGI-POLICY-EFF-DT" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-POLICY-EXP-DT]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-POLICY-EXP-DT]"
+                      name="AGI-POLICY-EXP-DT" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-WRITING-COMPANY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-WRITING-COMPANY]"
+                      name="AGI-WRITING-COMPANY" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-AGENT-LNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="51"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-AGENT-LNAME]"
+                      name="AGI-AGENT-LNAME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-AGENT-FNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-AGENT-FNAME]"
+                      name="AGI-AGENT-FNAME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-AGENT-MNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGI-AGENT-MNAME]"
+                      name="AGI-AGENT-MNAME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Script Component"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              contactInfo="Executes a custom script.;Microsoft Corporation;Microsoft SqlServer v9; © 2004 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Executes a custom script."
+              name="Script Component"
+              version="8">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[My Project\Settings.Designer.vb]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[My Project\AssemblyInfo.vb]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ScriptComponent_50506f89a3174fd88f69f1fb0153fd11")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("ScriptComponent_50506f89a3174fd88f69f1fb0153fd11")> 
+<Assembly: AssemblyCopyright("Copyright @  2018")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("2741d61b-0f27-404b-af92-3a7eb3a8f722")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> 
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.vb]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+' Microsoft SQL Server Integration Services component wrapper
+' This module defines the base class for your component
+' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+
+Imports System
+Imports System.Data
+Imports Microsoft.SqlServer.Dts.Pipeline
+Imports Microsoft.SqlServer.Dts.Pipeline.Wrapper
+Imports Microsoft.SqlServer.Dts.Runtime.Wrapper
+
+<CLSCompliant(False)> _
+Public Class UserComponent
+    Inherits ScriptComponent
+
+    Public Connections As New Connections(Me)
+    Public Variables As New Variables(Me)
+
+    Public Overrides Sub ProcessInput(ByVal InputID As Integer, ByVal InputName As String, ByVal Buffer As PipelineBuffer, ByVal OutputMap As OutputNameMap)
+
+        If InputName.Equals("Input 0", StringComparison.Ordinal) Then
+            Input0_ProcessInput(New Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap))
+        End If
+
+    End Sub
+
+    Public Overridable Sub Input0_ProcessInput(ByVal Buffer As Input0Buffer)
+
+        While Buffer.NextRow()
+            Input0_ProcessInputRow(Buffer)
+        End While
+
+    End Sub
+
+    Public Overridable Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+
+    End Sub
+
+End Class
+
+<CLSCompliant(False)> _
+Public Class Connections
+
+    Dim ParentComponent As ScriptComponent
+
+    <CLSCompliant(False)> _
+    Public Sub New(ByVal Component As ScriptComponent)
+        ParentComponent = Component
+    End Sub
+
+End Class
+
+<CLSCompliant(False)> _
+Public Class Variables
+
+    Dim ParentComponent As ScriptComponent
+
+    <CLSCompliant(False)> _
+    Public Sub New(ByVal Component As ScriptComponent)
+        ParentComponent = Component
+    End Sub
+
+End Class
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[My Project\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.vb]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#Region "Help:  Introduction to the Script Component"
+' The Script Component allows you to perform virtually any operation that can be accomplished in
+' a .Net application within the context of an Integration Services data flow.
+
+' Expand the other regions which have "Help" prefixes for examples of specific ways to use
+' Integration Services features within this script component.
+#End Region
+
+#Region "Imports"
+Imports System
+Imports System.Data
+Imports System.Math
+Imports Microsoft.SqlServer.Dts.Pipeline.Wrapper
+Imports Microsoft.SqlServer.Dts.Runtime.Wrapper
+#End Region
+
+' This is the class to which to add your code.  Do not change the name, attributes, or parent
+' of this class.
+<Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute> _
+<CLSCompliant(False)> _
+Public Class ScriptMain
+    Inherits UserComponent
+
+#Region "Help:  Using Integration Services variables and parameters"
+    'To use a variable in this script, first ensure that the variable has been added to
+    'either the list contained in the ReadOnlyVariables property or the list contained in
+    'the ReadWriteVariables property of this script component, according to whether or not your
+    'code needs to write into the variable.  To do so, save this script, close this instance of
+    'Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties.
+    'To use a parameter in this script, follow the same steps. Parameters are always read-only.
+
+    'Example of reading from a variable or parameter:
+    ' startTime = Variables.MyStartTime;
+
+    'Example of writing to a variable:
+    ' Variables.myStringVariable = "new value";
+#End Region
+
+#Region "Help:  Using Integration Services Connnection Managers"
+    'Some types of connection managers can be used in this script component.  See the help topic
+    '"Working with Connection Managers Programatically" for details.
+
+    'To use a connection manager in this script, first ensure that the connection manager has
+    'been added to either the list of connection managers on the Connection Managers page of the
+    'script component editor.  To add the connection manager, save this script, close this instance of
+    ' Visual Studio, and add the Connection Manager to the list.
+
+    'If the component needs to hold a connection open while processing rows, override the
+    'AcquireConnections and ReleaseConnections methods.
+
+    'Example of using an ADO.Net connection manager to acquire a SqlConnection:
+    ' Dim rawConnection As Object = Connections.SalesDB.AcquireConnection(Transaction)
+    ' Dim salesDBConn As SqlConnection = CType(rawConnection, SqlConnection)
+
+    'Example of using a File connection manager to acquire a file path:
+    ' Dim rawConnection As Object = Connections.Prices_zip.AcquireConnection(Transaction)
+    ' Dim filePath As String = CType(rawConnection, String)
+
+    'Example of releasing a connection manager:
+    ' Connections.SalesDB.ReleaseConnection(rawConnection)
+#End Region
+
+#Region "Help:  Firing Integration Services Events"
+    'This script component can fire events.
+
+    'Example of firing an error event:
+    ' ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, cancel)
+
+    'Example of firing an information event:
+    ' ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain)
+
+    'Example of firing a warning event:
+    ' ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0)
+
+#End Region
+
+    'This method is called once, before rows begin to be processed in the data flow.
+    '
+    'You can remove this method if you don't need to do anything here.
+    Public Overrides Sub PreExecute()
+        MyBase.PreExecute()
+        '
+        ' Add your code here
+        '
+    End Sub
+
+    ' This method is called after all the rows have passed through this component.
+    '
+    ' You can delete this method if you don't need to do anything here.
+    Public Overrides Sub PostExecute()
+        MyBase.PostExecute()
+        '
+        ' Add your code here
+        '
+    End Sub
+
+    'This method is called once for every row that passes through the component from Input0.
+    '
+    'Example of reading a value from a column in the the row:
+    ' zipCode = Row.ZipCode
+    '
+    'Example of writing a value to a column in the row:
+    ' Row.ZipCode = zipCode
+    Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+        '
+        ' Add your code here
+        '
+    End Sub
+
+End Class
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ScriptComponent_50506f89a3174fd88f69f1fb0153fd11.vbproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F6C8738-45F5-4797-9B05-C38A2DA566F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>My Project</AppDesignerFolder>
+    <RootNamespace>ScriptComponent_50506f89a3174fd88f69f1fb0153fd11</RootNamespace>
+    <AssemblyName>ScriptComponent_50506f89a3174fd88f69f1fb0153fd11</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- This sections specifies references for the project. -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.vb" />
+    <Compile Include="BufferWrapper.vb" />
+    <Compile Include="ComponentWrapper.vb" />
+  </ItemGroup>
+  <!-- Visual Basic supports Importing namespaces (equivalent to using statements in C#).-->
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a VB project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" />
+        <Host Name="SSIS_SC110" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC110</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+	<msb:PropertyGroup>
+		<msb:Language>msBuild</msb:Language>
+		<msb:CodeName>ScriptComponent_50506f89a3174fd88f69f1fb0153fd11</msb:CodeName>
+		<msb:DisplayName>ScriptComponent_50506f89a3174fd88f69f1fb0153fd11</msb:DisplayName>
+		<msb:ProjectId>{1679F9D3-B43D-47EC-9084-E61B01053B06}</msb:ProjectId>
+	</msb:PropertyGroup>
+	<msb:ItemGroup>
+		<msb:Project Include="ScriptComponent_50506f89a3174fd88f69f1fb0153fd11.vbproj"/>
+		<msb:File Include="My Project\AssemblyInfo.vb"/>
+		<msb:File Include="ComponentWrapper.vb"/>
+		<msb:File Include="My Project\Resources.resx"/>
+		<msb:File Include="My Project\Resources.Designer.vb"/>
+		<msb:File Include="My Project\Settings.settings"/>
+		<msb:File Include="BufferWrapper.vb"/>
+		<msb:File Include="main.vb"/>
+		<msb:File Include="My Project\Settings.Designer.vb"/>
+	</msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[My Project\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.vb]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+' Microsoft SQL Server Integration Services buffer wrappers
+' This module defines classes for accessing data flow buffers
+' THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+
+
+Option Strict Off   ' This allows usage of PipelineBuffer typed accessors.
+
+Imports System
+Imports System.Data
+Imports Microsoft.SqlServer.Dts.Pipeline
+Imports Microsoft.SqlServer.Dts.Pipeline.Wrapper
+
+<CLSCompliant(False)> _
+Public Class Input0Buffer
+    Inherits ScriptBuffer
+
+    Public Sub New(ByVal Buffer As PipelineBuffer, ByVal BufferColumnIndexes As Integer(), ByVal OutputMap As OutputNameMap)
+        MyBase.New(Buffer, BufferColumnIndexes, OutputMap)
+    End Sub
+
+    Public Property [AGIMEMBNO]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(0))
+        End Get
+        Set
+            Me(0) = Value
+        End Set
+    End Property
+    Public Property [AGIMEMBNO_IsNull] As Boolean
+        Get
+            Return IsNull(0)
+        End Get
+        Set
+            If (value)
+                SetNull(0)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIPOLICYRCFLAG]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(1))
+        End Get
+        Set
+            Me(1) = Value
+        End Set
+    End Property
+    Public Property [AGIPOLICYRCFLAG_IsNull] As Boolean
+        Get
+            Return IsNull(1)
+        End Get
+        Set
+            If (value)
+                SetNull(1)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIPOLICYEFFDT]() As DateTime
+        Get
+            Return Buffer.GetDateTime(Me.BufferColumnIndexes(2))
+        End Get
+        Set
+            Me(2) = Value
+        End Set
+    End Property
+    Public Property [AGIPOLICYEFFDT_IsNull] As Boolean
+        Get
+            Return IsNull(2)
+        End Get
+        Set
+            If (value)
+                SetNull(2)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIPOLICYNO]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(3))
+        End Get
+        Set
+            Me(3) = Value
+        End Set
+    End Property
+    Public Property [AGIPOLICYNO_IsNull] As Boolean
+        Get
+            Return IsNull(3)
+        End Get
+        Set
+            If (value)
+                SetNull(3)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGILOBDESC]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(4))
+        End Get
+        Set
+            Me(4) = Value
+        End Set
+    End Property
+    Public Property [AGILOBDESC_IsNull] As Boolean
+        Get
+            Return IsNull(4)
+        End Get
+        Set
+            If (value)
+                SetNull(4)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIPOLICYEXPDT]() As DateTime
+        Get
+            Return Buffer.GetDateTime(Me.BufferColumnIndexes(5))
+        End Get
+        Set
+            Me(5) = Value
+        End Set
+    End Property
+    Public Property [AGIPOLICYEXPDT_IsNull] As Boolean
+        Get
+            Return IsNull(5)
+        End Get
+        Set
+            If (value)
+                SetNull(5)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIAGENTFNAME]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(6))
+        End Get
+        Set
+            Me(6) = Value
+        End Set
+    End Property
+    Public Property [AGIAGENTFNAME_IsNull] As Boolean
+        Get
+            Return IsNull(6)
+        End Get
+        Set
+            If (value)
+                SetNull(6)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIAGENTMNAME]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(7))
+        End Get
+        Set
+            Me(7) = Value
+        End Set
+    End Property
+    Public Property [AGIAGENTMNAME_IsNull] As Boolean
+        Get
+            Return IsNull(7)
+        End Get
+        Set
+            If (value)
+                SetNull(7)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIWRITINGCOMPANY]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(8))
+        End Get
+        Set
+            Me(8) = Value
+        End Set
+    End Property
+    Public Property [AGIWRITINGCOMPANY_IsNull] As Boolean
+        Get
+            Return IsNull(8)
+        End Get
+        Set
+            If (value)
+                SetNull(8)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIAGENTLNAME]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(9))
+        End Get
+        Set
+            Me(9) = Value
+        End Set
+    End Property
+    Public Property [AGIAGENTLNAME_IsNull] As Boolean
+        Get
+            Return IsNull(9)
+        End Get
+        Set
+            If (value)
+                SetNull(9)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIPOSTCODE]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(10))
+        End Get
+        Set
+            Me(10) = Value
+        End Set
+    End Property
+    Public Property [AGIPOSTCODE_IsNull] As Boolean
+        Get
+            Return IsNull(10)
+        End Get
+        Set
+            If (value)
+                SetNull(10)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIINSMNAME]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(11))
+        End Get
+        Set
+            Me(11) = Value
+        End Set
+    End Property
+    Public Property [AGIINSMNAME_IsNull] As Boolean
+        Get
+            Return IsNull(11)
+        End Get
+        Set
+            If (value)
+                SetNull(11)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIINSNAME2]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(12))
+        End Get
+        Set
+            Me(12) = Value
+        End Set
+    End Property
+    Public Property [AGIINSNAME2_IsNull] As Boolean
+        Get
+            Return IsNull(12)
+        End Get
+        Set
+            If (value)
+                SetNull(12)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIINSLNAME]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(13))
+        End Get
+        Set
+            Me(13) = Value
+        End Set
+    End Property
+    Public Property [AGIINSLNAME_IsNull] As Boolean
+        Get
+            Return IsNull(13)
+        End Get
+        Set
+            If (value)
+                SetNull(13)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIINSFNAME]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(14))
+        End Get
+        Set
+            Me(14) = Value
+        End Set
+    End Property
+    Public Property [AGIINSFNAME_IsNull] As Boolean
+        Get
+            Return IsNull(14)
+        End Get
+        Set
+            If (value)
+                SetNull(14)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGINAMETYPE]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(15))
+        End Get
+        Set
+            Me(15) = Value
+        End Set
+    End Property
+    Public Property [AGINAMETYPE_IsNull] As Boolean
+        Get
+            Return IsNull(15)
+        End Get
+        Set
+            If (value)
+                SetNull(15)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGITOWNSUBURB]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(16))
+        End Get
+        Set
+            Me(16) = Value
+        End Set
+    End Property
+    Public Property [AGITOWNSUBURB_IsNull] As Boolean
+        Get
+            Return IsNull(16)
+        End Get
+        Set
+            If (value)
+                SetNull(16)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGISTATEDESC]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(17))
+        End Get
+        Set
+            Me(17) = Value
+        End Set
+    End Property
+    Public Property [AGISTATEDESC_IsNull] As Boolean
+        Get
+            Return IsNull(17)
+        End Get
+        Set
+            If (value)
+                SetNull(17)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGISTREETADDRESS]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(18))
+        End Get
+        Set
+            Me(18) = Value
+        End Set
+    End Property
+    Public Property [AGISTREETADDRESS_IsNull] As Boolean
+        Get
+            Return IsNull(18)
+        End Get
+        Set
+            If (value)
+                SetNull(18)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIEXTRAADDRESS]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(19))
+        End Get
+        Set
+            Me(19) = Value
+        End Set
+    End Property
+    Public Property [AGIEXTRAADDRESS_IsNull] As Boolean
+        Get
+            Return IsNull(19)
+        End Get
+        Set
+            If (value)
+                SetNull(19)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Property [AGIPOLICYSTATUS]() As String
+        Get
+            Return Buffer.GetString(Me.BufferColumnIndexes(20))
+        End Get
+        Set
+            Me(20) = Value
+        End Set
+    End Property
+    Public Property [AGIPOLICYSTATUS_IsNull] As Boolean
+        Get
+            Return IsNull(20)
+        End Get
+        Set
+            If (value)
+                SetNull(20)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIMEMBNO]() As String
+        Set
+            Me(21) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIMEMBNO_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(21)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIINSLNAME]() As String
+        Set
+            Me(22) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIINSLNAME_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(22)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIINSFNAME]() As String
+        Set
+            Me(23) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIINSFNAME_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(23)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIINSMNAME]() As String
+        Set
+            Me(24) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIINSMNAME_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(24)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIINSNAME2]() As String
+        Set
+            Me(25) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIINSNAME2_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(25)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGINAMETYPE]() As String
+        Set
+            Me(26) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGINAMETYPE_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(26)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGISTREETADDRESS]() As String
+        Set
+            Me(27) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGISTREETADDRESS_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(27)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIEXTRAADDRESS]() As String
+        Set
+            Me(28) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIEXTRAADDRESS_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(28)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGITOWNSUBURB]() As String
+        Set
+            Me(29) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGITOWNSUBURB_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(29)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGISTATEDESC]() As String
+        Set
+            Me(30) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGISTATEDESC_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(30)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIPOSTCODE]() As String
+        Set
+            Me(31) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIPOSTCODE_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(31)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIPOLICYNO]() As String
+        Set
+            Me(32) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIPOLICYNO_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(32)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGILOBDESC]() As String
+        Set
+            Me(33) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGILOBDESC_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(33)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIPOLICYSTATUS]() As String
+        Set
+            Me(34) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIPOLICYSTATUS_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(34)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIPOLICYRCFLAG]() As String
+        Set
+            Me(35) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIPOLICYRCFLAG_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(35)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIPOLICYEFFDT]() As String
+        Set
+            Me(36) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIPOLICYEFFDT_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(36)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIPOLICYEXPDT]() As String
+        Set
+            Me(37) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIPOLICYEXPDT_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(37)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIWRITINGCOMPANY]() As String
+        Set
+            Me(38) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIWRITINGCOMPANY_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(38)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIAGENTID]() As String
+        Set
+            Me(39) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIAGENTID_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(39)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIAGENTLNAME]() As String
+        Set
+            Me(40) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIAGENTLNAME_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(40)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIAGENTFNAME]() As String
+        Set
+            Me(41) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIAGENTFNAME_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(41)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public WriteOnly Property [NEWAGIAGENTMNAME]() As String
+        Set
+            Me(42) = Value
+        End Set
+    End Property
+    Public WriteOnly Property [NEWAGIAGENTMNAME_IsNull] As Boolean
+        Set
+            If (value)
+                SetNull(42)
+            Else
+                Throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.")
+            End If
+        End Set
+    End Property
+
+    Public Overloads Function NextRow() As Boolean
+        NextRow = MyBase.NextRow()
+    End Function
+
+    Public Overloads Function EndOfRowset() As Boolean
+        EndOfRowset = MyBase.EndOfRowset
+    End Function
+
+End Class
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[My Project\Resources.Designer.vb]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+Namespace My.Resources
+    
+    '''<summary>
+    '''   A strongly-typed resource class, for looking up localized strings, etc.
+    '''</summary>
+    'This class was auto-generated by the Strongly Typed Resource Builder
+    'class via a tool like ResGen or Visual Studio.NET.
+    'To add or remove a member, edit your .ResX file then rerun ResGen
+    'with the /str option, or rebuild your VS project.
+    Class MyResources
+        
+        Private Shared _resMgr As System.Resources.ResourceManager
+        
+        Private Shared _resCulture As System.Globalization.CultureInfo
+        
+        Friend Sub New()
+            MyBase.New
+        End Sub
+        
+        '''<summary>
+        '''   Returns the cached ResourceManager instance used by this class.
+        '''</summary>
+        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
+        Public Shared ReadOnly Property ResourceManager() As System.Resources.ResourceManager
+            Get
+                If (_resMgr Is Nothing) Then
+                    Dim temp As System.Resources.ResourceManager = New System.Resources.ResourceManager("My.Resources.MyResources", GetType(MyResources).Assembly)
+                    _resMgr = temp
+                End If
+                Return _resMgr
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   Overrides the current thread's CurrentUICulture property for all
+        '''   resource lookups using this strongly typed resource class.
+        '''</summary>
+        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
+        Public Shared Property Culture() As System.Globalization.CultureInfo
+            Get
+                Return _resCulture
+            End Get
+            Set
+                _resCulture = value
+            End Set
+        End Property
+    End Class
+End Namespace
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ScriptComponent_50506f89a3174fd88f69f1fb0153fd11.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[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
+KwtyAQAAcHMlAAAKeioAACoCHyUDbyIAAAoqAGYDLAoCHyVvJAAACisLcgEAAHBzJQAACnoqAAAq
+Ah8mA28iAAAKKgBmAywKAh8mbyQAAAorC3IBAABwcyUAAAp6KgAAKgIfJwNvIgAACioAZgMsCgIf
+J28kAAAKKwtyAQAAcHMlAAAKeioAACoCHygDbyIAAAoqAGYDLAoCHyhvJAAACisLcgEAAHBzJQAA
+CnoqAAAqAh8pA28iAAAKKgBmAywKAh8pbyQAAAorC3IBAABwcyUAAAp6KgAAKgIfKgNvIgAACioA
+ZgMsCgIfKm8kAAAKKwtyAQAAcHMlAAAKeioAABMwAQAJAAAANgAAEQIoJwAACgoGKgAAABMwAQAJ
+AAAANwAAEQIoKAAACgoGKgAAAH4CKCoAAAoCAnOYAAAGfQYAAAQCAnOZAAAGfQcAAAQqkgRyngAA
+cBpvKwAACiwVAgUCA28sAAAKDgRzEQAABm+WAAAGKgAAAEorBwIDb5cAAAYDb5IAAAYt8SoABioA
+ADoCKBcAAAoCA30IAAAEKgA6AigXAAAKAgN9CQAABCoAHgIolAAABioeAigtAAAKKh4CKC4AAAoq
+BioAAB4CKBcAAAoqEzACAC0AAAA4AAARfgoAAAQtIHKuAABw0AwAAAIoFAAACm8wAAAKczEAAAoL
+B4AKAAAEfgoAAAQqAAAAEzABAAYAAAA5AAARfgsAAAQqAAAeAoALAAAEKkJzFwAACigRAAAKgA0A
+AAQqAAAAHgIoMgAACiobMAEAPwAAADoAABF+DAAABC0yfg0AAAQoEQAACigzAAAKfgwAAAQtHHOj
+AAAGgAwAAATeEH4NAAAEKBEAAAooNAAACtx+DAAABCoAARAAAAIAHQAMKQAQAAAAALQAAADOyu++
+AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNp
+b249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRl
+MDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFE
+ULQAAABCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAFAGwAAAB4FwAAI34AAOQXAACoGwAA
+I1N0cmluZ3MAAAAAjDMAAOAAAAAjVVMAbDQAABAAAAAjR1VJRAAAAHw0AADwAwAAI0Jsb2IAAAAA
+AAAAAgAAAVcVogkJDwAAAPolMwAWAAABAAAALQAAAA0AAAANAAAApAAAAGYAAABAAAAAPAAAADoA
+AAAFAAAAXgAAAIkAAAAJAAAAAQAAAAUAAAABAAAAAgAAAAMAAAACAAAAAABxGwEAAAAAAAoAlQFr
+AQoAyQGrAQYA2QHSAQoAMQJrAQYArwLSAQoAMQMHAw4AlANzAxIAwgNzAw4A0QNzAwYArgTSAQ4A
+fhVzAwYAHhYNFgYASxY2FhYArBaXFhYA+RbjFhYAEhfjFhYAPxcnFwYAaRdWFwoAqBeBFwoAwBcT
+ABYA9RfYFwYAKhgKGAYASBjSAQYAbBjSAQoAhRgTAAYAyRiqGAYA/xjSAQYAJRnSAQYAOxnSAQYA
+QhnSAQ4AZBlzAwYAnRmLGQYAxBmzGQYA1xlWFwYAORoKGAYAWRoKGAYAkRp3GgYAqhqLGQYAxxqq
+GAYA1RqLGQYA8BqLGQYACxuLGQYAJBuLGQYAPRuLGQYAWhuLGQAAAAABAAAAAAABAAEAAAAAACkA
+NwAFAAEAAQAAAAAAawA3AAkAAQACAAABEAB2ADcADQABAAMABQEAAIAAAAANAAUACAAFAQAAjgAA
+AA0ABQAPAAEAAACpALYAHQAGABEAAQAAAOcAtgAtAAYAlAABAAAA9QC2AA0ACACYAAEAAAABAbYA
+DQAJAJkAAQAAAAsBtgAgAAoAmgAAAAAAFgEiAQ0ACgCeAAABEABgAbYAOQAMAKIAMQD0ASAAMQAd
+Ai0AMQA/AjoAMQBkAkcAIQBAA5AABgD1ANYABgABAdoAAQDcFe4AAQDcFe4AEQAuFvgAEQBXFvwA
+EQDEFhoBEQDMFh4BUCAAAAAABhilARMAAQBYIAAAAAAGGKUBEwABAGAgAAAAABEY4AEXAAEAjCAA
+AAAAEwjnARsAAQCkIAAAAAATCA0CKAABALwgAAAAABMINgI1AAEA1CAAAAAAEwhUAkIAAQDsIAAA
+AABGApoCYwABAAghAAAAAEYCowJoAAIAHCEAAAAAgwC0AmwAAgA0IQAAAABGArwCcQACAEghAAAA
+ABEAxQJ4AAIAZCEAAAAAAQDjAoAAAwCAIQAAAAAGGKUBEwAEAIghAAAAAAMI9wKLAAQAvCEAAAAA
+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
+tQBdAFgtAAAAAIYALw+1AF0AcC0AAAAABhilARMAXQCQLQAAAABGAo4V3gBdALgtAAAAAEYDrRXo
+AGEAzC0AAAAARgPBFegAYgDQLQAAAAAGGKUB8gBjAOAtAAAAAAYYpQHyAGQA8C0AAAAABhilARMA
+ZQD4LQAAAABGAvYVEwBlAAAuAAAAAEYCARYTAGUACC4AAAAARgLBFegAZQAMLgAAAAADGKUBEwBm
+ABQuAAAAABYIYxYAAWYAUC4AAAAAFgh3FgUBZgBkLgAAAAAWCIMWCgFmAGwuAAAAABEY4AEXAGcA
+gC4AAAAABhilARMAZwCILgAAAAAWCNkWIQFnAAAAAQChAgAAAQDaAgAAAQDaAgAAAQDfAwAAAgDm
+AwAAAwD6AwAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAA
+AQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAg
+BAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAA
+AQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAg
+BAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAA
+AQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAg
+BAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAA
+AQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAg
+BAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAAAQAgBAAA
+AQAgBAAAAQAgBAAAAQCbFQAAAgCjFQAAAwDfAwAABAD6AwAAAQDfAwAAAQDYFQAAAQDsFQAAAQDs
+FQAAAQDYFQAAAQAgBAkApQETAHkApQErAYkApQE6AREApQETAJEApQETACQApQETACwApQETADQA
+pQETADwApQETACQA9wKLACwA9wKLADQA9wKLADwA9wKLAJkApQETAKEApQETAKkApQGwALEAORjU
+ARkAmgJjABkAowJoACkAWhjhARkAvAJxAMEAdhjxARkApQETAMkApQEBAkQAQAOQAEwA2RaLAEwA
+oBh+AkwApQETANEApQG5ADkApQGmADkA3wOTAjkA5gOXAkEA3RibAjkA5xigAjkA8BimAjkA9xir
+AtkApQGwAEEAGRmwAjkAJw+1ADkALw+1AOEApQG5AFkApQETAOkAmgK7AlkAUxnCAlkA9hUTAFkA
+ARYTAPkApQETACkAphnIAmEApQHOAnEApQETAAkBzBnrAgkB0hnrAhEBpQETABkBpQGrAiEBpQET
+ACkBpQGwADEBpQGwADkBpQGwAEEBpQGwAEkBpQGwAFEBpQGwAFkBpQGwAGEBpQGwAGkBpQGwACkA
+gwCiAS4A8wGNAi4A6wG5Ay4AwwEdAy4A4wGiAy4A+wGNAi4AAwK5Ay4AswH1Ai4AuwH+Ai4AywFl
+Ay4A0wFyAy4A6wCNAi4ASwGcAy4A2wGNAkAAKwBZAUAAEwAxAUMAEwAxAUMAGwBAAUkAgwCOAWMA
+GwBAAWMAEwAxAWkAgwDHAYAAKwBZAYMAcwBZAYMAGwBAAYMAewBZAYkAgwCzAaAAKwBZAaMAwwAJ
+AqMAEwAxAcAAKwBZAcMA6wCNAsMAEwAxAeAAKwBZAeMASwGNAgABEwAxAQABKwBZAQMBSwGNAiAB
+KwBZASABEwAxASMBSwGNAkABKwBZAUABEwAxAUMBSwGNAmABKwBZAWABEwAxAWMBSwGNAmMBewFZ
+AYABKwBZAaABKwBZAcABKwBZAcABEwAxAeABKwBZAQACEwAxAQACKwBZAYkLEwDiAqkLEwDiAskL
+qwFZAQATSwGNAiATSwGNAnoBfwGEAYkB2QHdAegB7QH8AfwBhALtAdkB7QHZAbYC2QHtAdkB7QHZ
+AbYC2QHtAdkB7QHZAe0B2QHtAdkB7QHZAe0B2QHtAdkB7QHZAe0B2QHtAdkB7QHZAe0B2QHtAdkB
+7QHZAe0B2QHZAdkB1gLdAvACBAABAAYABQAHAAYADABcAA0AXgAAAMkBTwAAAIICVAAAADECWQAA
+AI4CXgAAAEoDmAAAADsPyQAAAEUPzQAAAFYPyQAAAGYPzQAAAH0P0QAAAIwPzQAAAKIPyQAAAK4P
+zQAAAMEPyQAAAMwPzQAAAN4P0QAAAO0PzQAAAAMQyQAAABEQzQAAACYQyQAAADQQzQAAAEkQyQAA
+AFsQzQAAAHQQyQAAAIIQzQAAAJcQyQAAAKMQzQAAALYQyQAAAMIQzQAAANUQyQAAAOEQzQAAAPQQ
+yQAAAAARzQAAABMRyQAAAB8RzQAAADIRyQAAAD4RzQAAAFERyQAAAF8RzQAAAHQRyQAAAIERzQAA
+AJURyQAAAKYRzQAAAL4RyQAAAM4RzQAAAOURyQAAAPURzQAAAAwSyQAAABkSzQAAAC0SyQAAADwS
+zQAAAFISyQAAAGESzQAAAHcSyQAAAIYSzQAAAJwSyQAAAKsSzQAAAMESyQAAANASzQAAAOYSyQAA
+APoSzQAAABUTyQAAACgTzQAAAEITyQAAAFMTzQAAAGsTyQAAAHsTzQAAAJITyQAAAKETzQAAALcT
+yQAAAMYTzQAAANwTyQAAAOoTzQAAAP8TyQAAABIUzQAAACwUyQAAAD8UzQAAAFkUyQAAAGsUzQAA
+AIQUyQAAAJYUzQAAAK8UyQAAAMQUzQAAAOAUyQAAAO4UzQAAAAMVyQAAABQVzQAAACwVyQAAAD0V
+zQAAAFUVyQAAAGYVzQAAAB4WEAEAAI8WFQEAACAEJgECAAQAAwACAAUABQACAAYABwACAAcACQAC
+AA8ACwACABIADQABABMADQACABQADwABABUADwACABYAEQABABcAEQACABgAEwABABkAEwACABoA
+FQABABsAFQABAB0AFwACABwAFwACAB4AGQABAB8AGQACACAAGwABACEAGwACACIAHQABACMAHQAB
+ACUAHwACACQAHwACACYAIQABACcAIQABACkAIwACACgAIwABACsAJQACACoAJQACACwAJwABAC0A
+JwACAC4AKQABAC8AKQACADAAKwABADEAKwACADIALQABADMALQACADQALwABADUALwACADYAMQAB
+ADcAMQACADgAMwABADkAMwACADoANQABADsANQACADwANwABAD0ANwABAD8AOQACAD4AOQACAEAA
+OwABAEEAOwACAEIAPQABAEMAPQACAEQAPwABAEUAPwABAEcAQQACAEYAQQACAEgAQwABAEkAQwAB
+AEsARQACAEoARQABAE0ARwACAEwARwACAE4ASQABAE8ASQABAFEASwACAFAASwACAFIATQABAFMA
+TQACAFQATwABAFUATwACAFYAUQABAFcAUQACAFgAUwABAFkAUwACAFoAVQABAFsAVQACAFwAVwAB
+AF0AVwACAF4AWQABAF8AWQABAGEAWwACAGAAWwACAGIAXQABAGMAXQACAGQAXwABAGUAXwABAGYA
+YQABAGcAYwABAGgAZQABAGkAZwABAGoAaQABAGsAawABAGwAbQABAG0AbwABAG4AcQABAG8AcwAB
+AHAAdQABAHEAdwABAHIAeQABAHMAewABAHQAfQABAHUAfwABAHYAgQABAHcAgwABAHgAhQABAHkA
+hwABAHoAiQABAHsAiwABAHwAjQABAH0AjwABAH4AkQABAH8AkwABAIAAlQABAIEAlwABAIIAmQAB
+AIMAmwABAIQAnQABAIUAnwABAIYAoQABAIcAowABAIgApQABAIkApwABAIoAqQABAIsAqwABAIwA
+rQABAI0ArwABAI4AsQABAI8AswABAJAAtQABAJEAtwACAJ8AuQACAKAAuwABAKEAuwACAKQAvQB1
+AHUAiABeAWUBbAFzAWsCcgIEgAAAAQAAAAAAAAAAAAAAAAC2AAAABAAAAAAAAAAAAAAAAQAKAAAA
+AAAKAAAAAAAAAAAAAAAKABMAAAAAAAsAAAAAAAAAAAAAAJ0AVgMAAAAACwAAAAAAAAAAAAAAnQCh
+AwAAAAAEAAAAAAAAAAAAAAABANIBAAAAAAAAAAABAAAA9BkAAAUABAAGAAQAAAAQAAwA2AIAABAA
+GQDYAgAAAAAbANgCLQD3AS0AeQIAAAA8TW9kdWxlPgBtc2NvcmxpYgBNaWNyb3NvZnQuVmlzdWFs
+QmFzaWMATXlBcHBsaWNhdGlvbgBTY3JpcHRDb21wb25lbnRfNTA1MDZmODlhMzE3NGZkODhmNjlm
+MWZiMDE1M2ZkMTEuTXkATXlDb21wdXRlcgBNeVByb2plY3QATXlXZWJTZXJ2aWNlcwBUaHJlYWRT
+YWZlT2JqZWN0UHJvdmlkZXJgMQBJbnB1dDBCdWZmZXIAU2NyaXB0Q29tcG9uZW50XzUwNTA2Zjg5
+YTMxNzRmZDg4ZjY5ZjFmYjAxNTNmZDExAFVzZXJDb21wb25lbnQAQ29ubmVjdGlvbnMAVmFyaWFi
+bGVzAFNjcmlwdE1haW4ATXlSZXNvdXJjZXMAU2NyaXB0Q29tcG9uZW50XzUwNTA2Zjg5YTMxNzRm
+ZDg4ZjY5ZjFmYjAxNTNmZDExLk15LlJlc291cmNlcwBNeVNldHRpbmdzAE1pY3Jvc29mdC5WaXN1
+YWxCYXNpYy5BcHBsaWNhdGlvblNlcnZpY2VzAEFwcGxpY2F0aW9uQmFzZQAuY3RvcgBNaWNyb3Nv
+ZnQuVmlzdWFsQmFzaWMuRGV2aWNlcwBDb21wdXRlcgBTeXN0ZW0AT2JqZWN0AC5jY3RvcgBnZXRf
+Q29tcHV0ZXIAbV9Db21wdXRlck9iamVjdFByb3ZpZGVyAGdldF9BcHBsaWNhdGlvbgBtX0FwcE9i
+amVjdFByb3ZpZGVyAFVzZXIAZ2V0X1VzZXIAbV9Vc2VyT2JqZWN0UHJvdmlkZXIAZ2V0X1dlYlNl
+cnZpY2VzAG1fTXlXZWJTZXJ2aWNlc09iamVjdFByb3ZpZGVyAEFwcGxpY2F0aW9uAFdlYlNlcnZp
+Y2VzAEVxdWFscwBvAEdldEhhc2hDb2RlAFR5cGUAR2V0VHlwZQBUb1N0cmluZwBDcmVhdGVfX0lu
+c3RhbmNlX18AVABpbnN0YW5jZQBEaXNwb3NlX19JbnN0YW5jZV9fAGdldF9HZXRJbnN0YW5jZQBN
+aWNyb3NvZnQuVmlzdWFsQmFzaWMuTXlTZXJ2aWNlcy5JbnRlcm5hbABDb250ZXh0VmFsdWVgMQBt
+X0NvbnRleHQAR2V0SW5zdGFuY2UATWljcm9zb2Z0LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3Nv
+ZnQuU3FsU2VydmVyLkR0cy5QaXBlbGluZQBTY3JpcHRCdWZmZXIATWljcm9zb2Z0LlNxbFNlcnZl
+ci5QaXBlbGluZUhvc3QAUGlwZWxpbmVCdWZmZXIAT3V0cHV0TmFtZU1hcABCdWZmZXIAQnVmZmVy
+Q29sdW1uSW5kZXhlcwBPdXRwdXRNYXAAZ2V0X0FHSU1FTUJOTwBzZXRfQUdJTUVNQk5PAFZhbHVl
+AGdldF9BR0lNRU1CTk9fSXNOdWxsAHNldF9BR0lNRU1CTk9fSXNOdWxsAGdldF9BR0lQT0xJQ1lS
+Q0ZMQUcAc2V0X0FHSVBPTElDWVJDRkxBRwBnZXRfQUdJUE9MSUNZUkNGTEFHX0lzTnVsbABzZXRf
+QUdJUE9MSUNZUkNGTEFHX0lzTnVsbABEYXRlVGltZQBnZXRfQUdJUE9MSUNZRUZGRFQAc2V0X0FH
+SVBPTElDWUVGRkRUAGdldF9BR0lQT0xJQ1lFRkZEVF9Jc051bGwAc2V0X0FHSVBPTElDWUVGRkRU
+X0lzTnVsbABnZXRfQUdJUE9MSUNZTk8Ac2V0X0FHSVBPTElDWU5PAGdldF9BR0lQT0xJQ1lOT19J
+c051bGwAc2V0X0FHSVBPTElDWU5PX0lzTnVsbABnZXRfQUdJTE9CREVTQwBzZXRfQUdJTE9CREVT
+QwBnZXRfQUdJTE9CREVTQ19Jc051bGwAc2V0X0FHSUxPQkRFU0NfSXNOdWxsAGdldF9BR0lQT0xJ
+Q1lFWFBEVABzZXRfQUdJUE9MSUNZRVhQRFQAZ2V0X0FHSVBPTElDWUVYUERUX0lzTnVsbABzZXRf
+QUdJUE9MSUNZRVhQRFRfSXNOdWxsAGdldF9BR0lBR0VOVEZOQU1FAHNldF9BR0lBR0VOVEZOQU1F
+AGdldF9BR0lBR0VOVEZOQU1FX0lzTnVsbABzZXRfQUdJQUdFTlRGTkFNRV9Jc051bGwAZ2V0X0FH
+SUFHRU5UTU5BTUUAc2V0X0FHSUFHRU5UTU5BTUUAZ2V0X0FHSUFHRU5UTU5BTUVfSXNOdWxsAHNl
+dF9BR0lBR0VOVE1OQU1FX0lzTnVsbABnZXRfQUdJV1JJVElOR0NPTVBBTlkAc2V0X0FHSVdSSVRJ
+TkdDT01QQU5ZAGdldF9BR0lXUklUSU5HQ09NUEFOWV9Jc051bGwAc2V0X0FHSVdSSVRJTkdDT01Q
+QU5ZX0lzTnVsbABnZXRfQUdJQUdFTlRMTkFNRQBzZXRfQUdJQUdFTlRMTkFNRQBnZXRfQUdJQUdF
+TlRMTkFNRV9Jc051bGwAc2V0X0FHSUFHRU5UTE5BTUVfSXNOdWxsAGdldF9BR0lQT1NUQ09ERQBz
+ZXRfQUdJUE9TVENPREUAZ2V0X0FHSVBPU1RDT0RFX0lzTnVsbABzZXRfQUdJUE9TVENPREVfSXNO
+dWxsAGdldF9BR0lJTlNNTkFNRQBzZXRfQUdJSU5TTU5BTUUAZ2V0X0FHSUlOU01OQU1FX0lzTnVs
+bABzZXRfQUdJSU5TTU5BTUVfSXNOdWxsAGdldF9BR0lJTlNOQU1FMgBzZXRfQUdJSU5TTkFNRTIA
+Z2V0X0FHSUlOU05BTUUyX0lzTnVsbABzZXRfQUdJSU5TTkFNRTJfSXNOdWxsAGdldF9BR0lJTlNM
+TkFNRQBzZXRfQUdJSU5TTE5BTUUAZ2V0X0FHSUlOU0xOQU1FX0lzTnVsbABzZXRfQUdJSU5TTE5B
+TUVfSXNOdWxsAGdldF9BR0lJTlNGTkFNRQBzZXRfQUdJSU5TRk5BTUUAZ2V0X0FHSUlOU0ZOQU1F
+X0lzTnVsbABzZXRfQUdJSU5TRk5BTUVfSXNOdWxsAGdldF9BR0lOQU1FVFlQRQBzZXRfQUdJTkFN
+RVRZUEUAZ2V0X0FHSU5BTUVUWVBFX0lzTnVsbABzZXRfQUdJTkFNRVRZUEVfSXNOdWxsAGdldF9B
+R0lUT1dOU1VCVVJCAHNldF9BR0lUT1dOU1VCVVJCAGdldF9BR0lUT1dOU1VCVVJCX0lzTnVsbABz
+ZXRfQUdJVE9XTlNVQlVSQl9Jc051bGwAZ2V0X0FHSVNUQVRFREVTQwBzZXRfQUdJU1RBVEVERVND
+AGdldF9BR0lTVEFURURFU0NfSXNOdWxsAHNldF9BR0lTVEFURURFU0NfSXNOdWxsAGdldF9BR0lT
+VFJFRVRBRERSRVNTAHNldF9BR0lTVFJFRVRBRERSRVNTAGdldF9BR0lTVFJFRVRBRERSRVNTX0lz
+TnVsbABzZXRfQUdJU1RSRUVUQUREUkVTU19Jc051bGwAZ2V0X0FHSUVYVFJBQUREUkVTUwBzZXRf
+QUdJRVhUUkFBRERSRVNTAGdldF9BR0lFWFRSQUFERFJFU1NfSXNOdWxsAHNldF9BR0lFWFRSQUFE
+RFJFU1NfSXNOdWxsAGdldF9BR0lQT0xJQ1lTVEFUVVMAc2V0X0FHSVBPTElDWVNUQVRVUwBnZXRf
+QUdJUE9MSUNZU1RBVFVTX0lzTnVsbABzZXRfQUdJUE9MSUNZU1RBVFVTX0lzTnVsbABzZXRfTkVX
+QUdJTUVNQk5PAHNldF9ORVdBR0lNRU1CTk9fSXNOdWxsAHNldF9ORVdBR0lJTlNMTkFNRQBzZXRf
+TkVXQUdJSU5TTE5BTUVfSXNOdWxsAHNldF9ORVdBR0lJTlNGTkFNRQBzZXRfTkVXQUdJSU5TRk5B
+TUVfSXNOdWxsAHNldF9ORVdBR0lJTlNNTkFNRQBzZXRfTkVXQUdJSU5TTU5BTUVfSXNOdWxsAHNl
+dF9ORVdBR0lJTlNOQU1FMgBzZXRfTkVXQUdJSU5TTkFNRTJfSXNOdWxsAHNldF9ORVdBR0lOQU1F
+VFlQRQBzZXRfTkVXQUdJTkFNRVRZUEVfSXNOdWxsAHNldF9ORVdBR0lTVFJFRVRBRERSRVNTAHNl
+dF9ORVdBR0lTVFJFRVRBRERSRVNTX0lzTnVsbABzZXRfTkVXQUdJRVhUUkFBRERSRVNTAHNldF9O
+RVdBR0lFWFRSQUFERFJFU1NfSXNOdWxsAHNldF9ORVdBR0lUT1dOU1VCVVJCAHNldF9ORVdBR0lU
+T1dOU1VCVVJCX0lzTnVsbABzZXRfTkVXQUdJU1RBVEVERVNDAHNldF9ORVdBR0lTVEFURURFU0Nf
+SXNOdWxsAHNldF9ORVdBR0lQT1NUQ09ERQBzZXRfTkVXQUdJUE9TVENPREVfSXNOdWxsAHNldF9O
+RVdBR0lQT0xJQ1lOTwBzZXRfTkVXQUdJUE9MSUNZTk9fSXNOdWxsAHNldF9ORVdBR0lMT0JERVND
+AHNldF9ORVdBR0lMT0JERVNDX0lzTnVsbABzZXRfTkVXQUdJUE9MSUNZU1RBVFVTAHNldF9ORVdB
+R0lQT0xJQ1lTVEFUVVNfSXNOdWxsAHNldF9ORVdBR0lQT0xJQ1lSQ0ZMQUcAc2V0X05FV0FHSVBP
+TElDWVJDRkxBR19Jc051bGwAc2V0X05FV0FHSVBPTElDWUVGRkRUAHNldF9ORVdBR0lQT0xJQ1lF
+RkZEVF9Jc051bGwAc2V0X05FV0FHSVBPTElDWUVYUERUAHNldF9ORVdBR0lQT0xJQ1lFWFBEVF9J
+c051bGwAc2V0X05FV0FHSVdSSVRJTkdDT01QQU5ZAHNldF9ORVdBR0lXUklUSU5HQ09NUEFOWV9J
+c051bGwAc2V0X05FV0FHSUFHRU5USUQAc2V0X05FV0FHSUFHRU5USURfSXNOdWxsAHNldF9ORVdB
+R0lBR0VOVExOQU1FAHNldF9ORVdBR0lBR0VOVExOQU1FX0lzTnVsbABzZXRfTkVXQUdJQUdFTlRG
+TkFNRQBzZXRfTkVXQUdJQUdFTlRGTkFNRV9Jc051bGwAc2V0X05FV0FHSUFHRU5UTU5BTUUAc2V0
+X05FV0FHSUFHRU5UTU5BTUVfSXNOdWxsAE5leHRSb3cARW5kT2ZSb3dzZXQAQUdJTUVNQk5PAEFH
+SU1FTUJOT19Jc051bGwAQUdJUE9MSUNZUkNGTEFHAEFHSVBPTElDWVJDRkxBR19Jc051bGwAQUdJ
+UE9MSUNZRUZGRFQAQUdJUE9MSUNZRUZGRFRfSXNOdWxsAEFHSVBPTElDWU5PAEFHSVBPTElDWU5P
+X0lzTnVsbABBR0lMT0JERVNDAEFHSUxPQkRFU0NfSXNOdWxsAEFHSVBPTElDWUVYUERUAEFHSVBP
+TElDWUVYUERUX0lzTnVsbABBR0lBR0VOVEZOQU1FAEFHSUFHRU5URk5BTUVfSXNOdWxsAEFHSUFH
+RU5UTU5BTUUAQUdJQUdFTlRNTkFNRV9Jc051bGwAQUdJV1JJVElOR0NPTVBBTlkAQUdJV1JJVElO
+R0NPTVBBTllfSXNOdWxsAEFHSUFHRU5UTE5BTUUAQUdJQUdFTlRMTkFNRV9Jc051bGwAQUdJUE9T
+VENPREUAQUdJUE9TVENPREVfSXNOdWxsAEFHSUlOU01OQU1FAEFHSUlOU01OQU1FX0lzTnVsbABB
+R0lJTlNOQU1FMgBBR0lJTlNOQU1FMl9Jc051bGwAQUdJSU5TTE5BTUUAQUdJSU5TTE5BTUVfSXNO
+dWxsAEFHSUlOU0ZOQU1FAEFHSUlOU0ZOQU1FX0lzTnVsbABBR0lOQU1FVFlQRQBBR0lOQU1FVFlQ
+RV9Jc051bGwAQUdJVE9XTlNVQlVSQgBBR0lUT1dOU1VCVVJCX0lzTnVsbABBR0lTVEFURURFU0MA
+QUdJU1RBVEVERVNDX0lzTnVsbABBR0lTVFJFRVRBRERSRVNTAEFHSVNUUkVFVEFERFJFU1NfSXNO
+dWxsAEFHSUVYVFJBQUREUkVTUwBBR0lFWFRSQUFERFJFU1NfSXNOdWxsAEFHSVBPTElDWVNUQVRV
+UwBBR0lQT0xJQ1lTVEFUVVNfSXNOdWxsAE5FV0FHSU1FTUJOTwBORVdBR0lNRU1CTk9fSXNOdWxs
+AE5FV0FHSUlOU0xOQU1FAE5FV0FHSUlOU0xOQU1FX0lzTnVsbABORVdBR0lJTlNGTkFNRQBORVdB
+R0lJTlNGTkFNRV9Jc051bGwATkVXQUdJSU5TTU5BTUUATkVXQUdJSU5TTU5BTUVfSXNOdWxsAE5F
+V0FHSUlOU05BTUUyAE5FV0FHSUlOU05BTUUyX0lzTnVsbABORVdBR0lOQU1FVFlQRQBORVdBR0lO
+QU1FVFlQRV9Jc051bGwATkVXQUdJU1RSRUVUQUREUkVTUwBORVdBR0lTVFJFRVRBRERSRVNTX0lz
+TnVsbABORVdBR0lFWFRSQUFERFJFU1MATkVXQUdJRVhUUkFBRERSRVNTX0lzTnVsbABORVdBR0lU
+T1dOU1VCVVJCAE5FV0FHSVRPV05TVUJVUkJfSXNOdWxsAE5FV0FHSVNUQVRFREVTQwBORVdBR0lT
+VEFURURFU0NfSXNOdWxsAE5FV0FHSVBPU1RDT0RFAE5FV0FHSVBPU1RDT0RFX0lzTnVsbABORVdB
+R0lQT0xJQ1lOTwBORVdBR0lQT0xJQ1lOT19Jc051bGwATkVXQUdJTE9CREVTQwBORVdBR0lMT0JE
+RVNDX0lzTnVsbABORVdBR0lQT0xJQ1lTVEFUVVMATkVXQUdJUE9MSUNZU1RBVFVTX0lzTnVsbABO
+RVdBR0lQT0xJQ1lSQ0ZMQUcATkVXQUdJUE9MSUNZUkNGTEFHX0lzTnVsbABORVdBR0lQT0xJQ1lF
+RkZEVABORVdBR0lQT0xJQ1lFRkZEVF9Jc051bGwATkVXQUdJUE9MSUNZRVhQRFQATkVXQUdJUE9M
+SUNZRVhQRFRfSXNOdWxsAE5FV0FHSVdSSVRJTkdDT01QQU5ZAE5FV0FHSVdSSVRJTkdDT01QQU5Z
+X0lzTnVsbABORVdBR0lBR0VOVElEAE5FV0FHSUFHRU5USURfSXNOdWxsAE5FV0FHSUFHRU5UTE5B
+TUUATkVXQUdJQUdFTlRMTkFNRV9Jc051bGwATkVXQUdJQUdFTlRGTkFNRQBORVdBR0lBR0VOVEZO
+QU1FX0lzTnVsbABORVdBR0lBR0VOVE1OQU1FAE5FV0FHSUFHRU5UTU5BTUVfSXNOdWxsAFNjcmlw
+dENvbXBvbmVudABQcm9jZXNzSW5wdXQASW5wdXRJRABJbnB1dE5hbWUASW5wdXQwX1Byb2Nlc3NJ
+bnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AFJvdwBQYXJlbnRDb21wb25lbnQAQ29tcG9uZW50
+AFByZUV4ZWN1dGUAUG9zdEV4ZWN1dGUAU3lzdGVtLlJlc291cmNlcwBSZXNvdXJjZU1hbmFnZXIA
+X3Jlc01ncgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBDdWx0dXJlSW5mbwBfcmVzQ3VsdHVyZQBnZXRf
+UmVzb3VyY2VNYW5hZ2VyAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAEN1bHR1cmUAU3lzdGVtLkNv
+bmZpZ3VyYXRpb24AQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UAbV9WYWx1ZQBtX1N5bmNPYmplY3QA
+Z2V0X1ZhbHVlAFN5c3RlbS5Db21wb25lbnRNb2RlbABFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUA
+RWRpdG9yQnJvd3NhYmxlU3RhdGUAU3lzdGVtLkNvZGVEb20uQ29tcGlsZXIAR2VuZXJhdGVkQ29k
+ZUF0dHJpYnV0ZQBTeXN0ZW0uRGlhZ25vc3RpY3MARGVidWdnZXJIaWRkZW5BdHRyaWJ1dGUATWlj
+cm9zb2Z0LlZpc3VhbEJhc2ljLkNvbXBpbGVyU2VydmljZXMAU3RhbmRhcmRNb2R1bGVBdHRyaWJ1
+dGUASGlkZU1vZHVsZU5hbWVBdHRyaWJ1dGUAU3lzdGVtLkNvbXBvbmVudE1vZGVsLkRlc2lnbgBI
+ZWxwS2V5d29yZEF0dHJpYnV0ZQBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFJ1bnRp
+bWVIZWxwZXJzAEdldE9iamVjdFZhbHVlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFu
+ZGxlAEFjdGl2YXRvcgBDcmVhdGVJbnN0YW5jZQBNeUdyb3VwQ29sbGVjdGlvbkF0dHJpYnV0ZQBz
+ZXRfVmFsdWUAU3lzdGVtLlJ1bnRpbWUuSW50ZXJvcFNlcnZpY2VzAENvbVZpc2libGVBdHRyaWJ1
+dGUAR2V0U3RyaW5nAHNldF9JdGVtAElzTnVsbABTZXROdWxsAEludmFsaWRPcGVyYXRpb25FeGNl
+cHRpb24AR2V0RGF0ZVRpbWUAQ0xTQ29tcGxpYW50QXR0cmlidXRlAFN0cmluZwBTdHJpbmdDb21w
+YXJpc29uAEdldENvbHVtbkluZGV4ZXMAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRy
+aWJ1dGUAU3lzdGVtLlJlZmxlY3Rpb24AQXNzZW1ibHkAZ2V0X0Fzc2VtYmx5AFN5c3RlbS5UaHJl
+YWRpbmcATW9uaXRvcgBFbnRlcgBFeGl0AERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUAU2Ny
+aXB0Q29tcG9uZW50XzUwNTA2Zjg5YTMxNzRmZDg4ZjY5ZjFmYjAxNTNmZDExLlJlc291cmNlcy5y
+ZXNvdXJjZXMAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJp
+bGl0eUF0dHJpYnV0ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAFRhcmdldEZyYW1ld29ya0F0
+dHJpYnV0ZQBBc3NlbWJseUZpbGVWZXJzaW9uQXR0cmlidXRlAEd1aWRBdHRyaWJ1dGUAQXNzZW1i
+bHlUcmFkZW1hcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAQXNzZW1ibHlQ
+cm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0
+aW9uQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUAU2NyaXB0Q29tcG9uZW50XzUwNTA2
+Zjg5YTMxNzRmZDg4ZjY5ZjFmYjAxNTNmZDExLmRsbAAAAACAm0kAcwBOAHUAbABsACAAcAByAG8A
+cABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAu
+ACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0A
+bgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAADFNAHkALgBSAGUAcwBvAHUAcgBj
+AGUAcwAuAE0AeQBSAGUAcwBvAHUAcgBjAGUAcwAA33FtNqLxwESPU460TW4CRQAIt3pcVhk04IkI
+sD9ffxHVCjoDIAABAwAAAQQAABIMBwYVEhgBEgwEAAASCAcGFRIYARIIBAAAEhEHBhUSGAESEQQA
+ABIUBwYVEhgBEhQECAASDAQIABIIBAgAEhEECAASFAQgAQIcAyAACAQgABIVAyAADgIeAAcQAQEe
+AB4ABzABAQEQHgACEwAEIAATAAcGFRIZARMABCgAEwAIiYRdzYCAzJEJIAMBEiEdCBIlBCABAQ4D
+IAACBCABAQIEIAARKQUgAQERKQMoAA4DKAACBCgAESkDBhIkAwYSKAkgBAEIDhIhEiUFIAEBEhwD
+BhItBSABARItAwYSMQMGEjUEAAASMQQAABI1BQABARI1BAgAEjEECAASNQMGEjQCBhwEAAASNAQI
+ABI0BSABARFBCAEAAQAAAAAABSACAQ4OGAEACk15VGVtcGxhdGUIMTAuMC4wLjAAAAQBAAAABhUS
+GAESDAYVEhgBEggGFRIYARIRBhUSGAESFAQHARIMBAcBEggEBwESEQQHARIUEwEADk15LkFwcGxp
+Y2F0aW9uAAAQAQALTXkuQ29tcHV0ZXIAABMBAA5NeS5XZWJTZXJ2aWNlcwAADAEAB015LlVzZXIA
+AAQAARwcAwcBAgMHAQgGAAESFRFdBAcBEhUDBwEOBRABAB4ABAoBHgAEBwEeAAcgBAEODg4OYQEA
+NFN5c3RlbS5XZWIuU2VydmljZXMuUHJvdG9jb2xzLlNvYXBIdHRwQ2xpZW50UHJvdG9jb2wSQ3Jl
+YXRlX19JbnN0YW5jZV9fE0Rpc3Bvc2VfX0luc3RhbmNlX18AAAAGFRIYARMABhUSGQETAAQKARMA
+BSABARMACAcDEwATABMABQEAAAAAAwYSIQMGHQgEIAEOCAUgAgEIHAQgAQIIBCABAQgFIAERKQgE
+BwERKQYgAgIOEXkFIAEdCAgFIAASgIEHIAIBDhKAgQYHAhIxEjEEBwESNQgBAAIAAAAAAAQAAQEc
+BAcBEjQIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBRwEAGi5ORVRGcmFt
+ZXdvcmssVmVyc2lvbj12NC4wAQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRAuTkVUIEZyYW1ld29y
+ayA0DAEABzEuMC4wLjAAACkBACQyNzQxZDYxYi0wZjI3LTQwNGItYWY5Mi0zYTdlYjNhOGY3MjIA
+AAUBAAEAABYBABFDb3B5cmlnaHQgQCAgMjAxOAAANQEAMFNjcmlwdENvbXBvbmVudF81MDUwNmY4
+OWEzMTc0ZmQ4OGY2OWYxZmIwMTUzZmQxMQAAADBoAAAAAAAAAAAAAE5oAAAAIAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAABAaAAAAAAAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA
+/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAA
+AQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAASAAAAFiAAADwAwAAAAAAAAAAAADwAzQAAABW
+AFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAAAAAAvQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAA
+PwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQAAAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAA
+AAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBuAAAAAAAAALAEUAMAAAEAUwB0AHIAaQBuAGcA
+RgBpAGwAZQBJAG4AZgBvAAAALAMAAAEAMAAwADAAMAAwADQAYgAwAAAAjAAxAAEARgBpAGwAZQBE
+AGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMAYwByAGkAcAB0AEMAbwBtAHAAbwBuAGUAbgB0AF8A
+NQAwADUAMAA2AGYAOAA5AGEAMwAxADcANABmAGQAOAA4AGYANgA5AGYAMQBmAGIAMAAxADUAMwBm
+AGQAMQAxAAAAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4AMAAuADAA
+AACMADUAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAYwByAGkAcAB0AEMAbwBtAHAAbwBu
+AGUAbgB0AF8ANQAwADUAMAA2AGYAOAA5AGEAMwAxADcANABmAGQAOAA4AGYANgA5AGYAMQBmAGIA
+MAAxADUAMwBmAGQAMQAxAC4AZABsAGwAAAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBn
+AGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAgACAAMgAwADEAOAAAAJQANQABAE8AcgBpAGcA
+aQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAGMAcgBpAHAAdABDAG8AbQBwAG8AbgBlAG4AdABf
+ADUAMAA1ADAANgBmADgAOQBhADMAMQA3ADQAZgBkADgAOABmADYAOQBmADEAZgBiADAAMQA1ADMA
+ZgBkADEAMQAuAGQAbABsAAAAAACEADEAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAYwBy
+AGkAcAB0AEMAbwBtAHAAbwBuAGUAbgB0AF8ANQAwADUAMAA2AGYAOAA5AGEAMwAxADcANABmAGQA
+OAA4AGYANgA5AGYAMQBmAGIAMAAxADUAMwBmAGQAMQAxAAAAAAA0AAgAAQBQAHIAbwBkAHUAYwB0
+AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAOAAIAAEAQQBzAHMAZQBtAGIAbAB5ACAA
+VgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAABgAAAMAAAAYDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Comma separated list of variables to be made available for read access"
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Comma separated list of variables to be made available for read and write access"
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost, Microsoft.SqlServer.TxScript, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">ScriptComponent_50506f89a3174fd88f69f1fb0153fd11</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages, Microsoft.SqlServer.VSTAScriptingLib, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">VisualBasic</property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataShaChecksum"
+                  typeConverter="NOTBROWSABLE">3f66ac1598807a8cd9cfd34fc42a85b86a41ed2d</property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum"
+                  typeConverter="NOTBROWSABLE">13f3d991a9ee5616a6a9694de1e72d6a</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Script Component.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-MEMBNO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="80"
+                      cachedName="AGI-MEMBNO"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-MEMBNO]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-POLICY-RCFLAG]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="AGI-POLICY-RCFLAG"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-RCFLAG]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-POLICY-EFF-DT]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="AGI-POLICY-EFF-DT"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-EFF-DT]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-POLICY-NO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="AGI-POLICY-NO"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-NO]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-LOB-DESC]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="AGI-LOB-DESC"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-LOB-DESC]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-POLICY-EXP-DT]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="AGI-POLICY-EXP-DT"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-EXP-DT]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-AGENT-FNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="AGI-AGENT-FNAME"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-AGENT-FNAME]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-AGENT-MNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="AGI-AGENT-MNAME"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-AGENT-MNAME]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-WRITING-COMPANY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="AGI-WRITING-COMPANY"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-WRITING-COMPANY]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-AGENT-LNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="51"
+                      cachedName="AGI-AGENT-LNAME"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-AGENT-LNAME]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-POST-CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="AGI-POST-CODE"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POST-CODE]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-INS-MNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="AGI-INS-MNAME"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-INS-MNAME]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-INS-NAME-2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="AGI-INS-NAME-2"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-INS-NAME-2]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-INS-LNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="51"
+                      cachedName="AGI-INS-LNAME"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-INS-LNAME]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-INS-FNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="AGI-INS-FNAME"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-INS-FNAME]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-NAME-TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="AGI-NAME-TYPE"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-NAME-TYPE]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-TOWN-SUBURB]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="19"
+                      cachedName="AGI-TOWN-SUBURB"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-TOWN-SUBURB]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-STATE-DESC]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="AGI-STATE-DESC"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-STATE-DESC]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-STREET-ADDRESS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="AGI-STREET-ADDRESS"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-STREET-ADDRESS]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-EXTRA-ADDRESS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="AGI-EXTRA-ADDRESS"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-EXTRA-ADDRESS]"
+                      usageType="readWrite" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[AGI-POLICY-STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="AGI-POLICY-STATUS"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGI-POLICY-STATUS]"
+                      usageType="readWrite" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Script Component.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\Data Flow Task\Script Component.Inputs[Input 0]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-MEMBNO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-MEMBNO]"
+                      name="NEW-AGI-MEMBNO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-INS-LNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="51"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-INS-LNAME]"
+                      name="NEW-AGI-INS-LNAME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-INS-FNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-INS-FNAME]"
+                      name="NEW-AGI-INS-FNAME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-INS-MNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-INS-MNAME]"
+                      name="NEW-AGI-INS-MNAME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-INS-NAME-2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-INS-NAME-2]"
+                      name="NEW-AGI-INS-NAME-2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-NAME-TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-NAME-TYPE]"
+                      name="NEW-AGI-NAME-TYPE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-STREET-ADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-STREET-ADDRESS]"
+                      name="NEW-AGI-STREET-ADDRESS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-EXTRA-ADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-EXTRA-ADDRESS]"
+                      name="NEW-AGI-EXTRA-ADDRESS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-TOWN-SUBURB]"
+                      codePage="1252"
+                      dataType="str"
+                      length="19"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-TOWN-SUBURB]"
+                      name="NEW-AGI-TOWN-SUBURB" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-STATE-DESC]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-STATE-DESC]"
+                      name="NEW-AGI-STATE-DESC" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POST-CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POST-CODE]"
+                      name="NEW-AGI-POST-CODE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-NO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-NO]"
+                      name="NEW-AGI-POLICY-NO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-LOB-DESC]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-LOB-DESC]"
+                      name="NEW-AGI-LOB-DESC" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-STATUS]"
+                      name="NEW-AGI-POLICY-STATUS" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-RCFLAG]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-RCFLAG]"
+                      name="NEW-AGI-POLICY-RCFLAG" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-EFF-DT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-EFF-DT]"
+                      name="NEW-AGI-POLICY-EFF-DT" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-EXP-DT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-POLICY-EXP-DT]"
+                      name="NEW-AGI-POLICY-EXP-DT" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-WRITING-COMPANY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-WRITING-COMPANY]"
+                      name="NEW-AGI-WRITING-COMPANY" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-AGENT-ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-AGENT-ID]"
+                      name="NEW-AGI-AGENT-ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-AGENT-LNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="51"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-AGENT-LNAME]"
+                      name="NEW-AGI-AGENT-LNAME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-AGENT-FNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-AGENT-FNAME]"
+                      name="NEW-AGI-AGENT-FNAME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-AGENT-MNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[NEW-AGI-AGENT-MNAME]"
+                      name="NEW-AGI-AGENT-MNAME" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Script Component.Inputs[Input 0]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Output 0]"
+              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Output 0"
+              startId="Package\Data Flow Task\Script Component.Outputs[Output 0]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Data Flow Task"
+          TopLeft="5.5,16.9716981132075" />
+        <AnnotationLayout
+          Text="Package created by Chris Peer &#xA;--Revised 01/06/2015--DEH -- reset password"
+          ParentId="Package"
+          Size="226,65"
+          Id="11237bef-d7e9-4e7d-8c1f-6875f4756b34"
+          TopLeft="318.518867924528,5.5">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Tahoma"
+              Size="11.25"
+              Color="#FF080000">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Data Flow Task\Flat File Destination"
+          TopLeft="5.50000000000003,209.5" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="16.5,5.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task\Script Component"
+          TopLeft="10,107.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output 0]"
+          TopLeft="91.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="91.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
