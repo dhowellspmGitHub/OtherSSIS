@@ -1,0 +1,2357 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/7/2018 10:25:12 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SDBS277"
+  DTS:CreatorName="KFBDOM1\jtmadmin"
+  DTS:Description="SSIS Package Description"
+  DTS:DTSID="{2DBCB5BB-ED68-41C2-889B-25F7AF474B9B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.71"
+  DTS:LocaleID="1033"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="RankComittee"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{3F225098-3486-43D6-B2FC-0C63B25F2D72}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{939D0AFD-EB4E-49B4-A690-87AD623E223A}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=membership-db-server.database.windows.net;User ID=kfbfed;Initial Catalog=Membership_TEST;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=false;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQNg4+dK65EOIjBiV0tdQ0wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAd8y+W3fdSJQbJy4lMnR6MAAAAAASAAACgAAAAEAAAACVnKOhTYcLLJv4s3kuVGWogAAAAU9G5AXv03SODG71m0pdWzyJ5H7rFhjz5zHABNjPzqQwUAAAA8nE0/AhPvF4N1rIDGsfDvsUr1Zk</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{588B6568-BE39-4BA7-9390-5F8E01E00947}"
+      DTS:ObjectName="SourceConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=SDBS287;User ID=SQLMgtApp;Initial Catalog=IMIS_STAGING_TEST;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=false;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQNg4+dK65EOIjBiV0tdQ0wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADG86fg4b6IfdxDR2xmMBgUAAAAAASAAACgAAAAEAAAAPi2lVjhVvDgezBPoTJaJB8gAAAA+Yk55+nZgAs/6NAZmoVbXf2Mpd0MZ63HgWi3753BZZEUAAAAGUVNFKUEakUK/cCW3r7KykUHWXE</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{DA6D1F28-4846-4CF4-8B8C-BE7EE84E8012}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Destination - RankComittee"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - RankComittee"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[RankComittee]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - RankComittee.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[MembershipNbr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="MembershipNbr"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[MembershipNbr]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[MembershipNbr]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[CategoryCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="CategoryCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CategoryCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CategoryCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[ChapterCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="ChapterCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[ChapterCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ChapterCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[MemberTypeCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="MemberTypeCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[MemberTypeCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[MemberTypeCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[StatusCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="StatusCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[StatusCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[StatusCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[EffectiveDt]"
+                      cachedDataType="dbDate"
+                      cachedName="EffectiveDt"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[EffectiveDt]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[EffectiveDt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[ExpirationDt]"
+                      cachedDataType="dbDate"
+                      cachedName="ExpirationDt"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[ExpirationDt]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ExpirationDt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[CommitteePositionNm]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CommitteePositionNm"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CommitteePositionNm]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CommitteePositionNm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[ComitteeCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="ComitteeCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[ComitteeCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ComitteeCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[ComitteeGroupCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="ComitteeGroupCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[ComitteeGroupCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ComitteeGroupCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[PositionTitleDesc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PositionTitleDesc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[PositionTitleDesc]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PositionTitleDesc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[PositionRankNbr]"
+                      cachedDataType="i4"
+                      cachedName="PositionRankNbr"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[PositionRankNbr]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PositionRankNbr]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[StateSenateCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="StateSenateCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[StateSenateCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[StateSenateCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[StateHouseCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="StateHouseCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[StateHouseCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[StateHouseCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[USCongressCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="USCongressCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[USCongressCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[USCongressCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[AddressPurposeCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="AddressPurposeCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[AddressPurposeCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AddressPurposeCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[AddressCategoryCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="AddressCategoryCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[AddressCategoryCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AddressCategoryCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[AddressLine1Desc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="AddressLine1Desc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[AddressLine1Desc]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AddressLine1Desc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[AddressLine2Desc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="AddressLine2Desc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[AddressLine2Desc]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AddressLine2Desc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[CityNm]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="CityNm"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CityNm]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CityNm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[StateOrProvinceCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="StateOrProvinceCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[StateOrProvinceCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[StateOrProvinceCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[ZipCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="ZipCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[ZipCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ZipCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[CountryCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="CountryCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CountryCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CountryCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[FullAddressDesc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="FullAddressDesc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[FullAddressDesc]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[FullAddressDesc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[WorkingAreaCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="WorkingAreaCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[WorkingAreaCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[WorkingAreaCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[MemberDistrictCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="MemberDistrictCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[MemberDistrictCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[MemberDistrictCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[FullNm]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="FullNm"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[FullNm]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[FullNm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[GroupNameDesc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="GroupNameDesc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[GroupNameDesc]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[GroupNameDesc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[PrefixNm]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="PrefixNm"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[PrefixNm]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PrefixNm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[FirstNm]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="FirstNm"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[FirstNm]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[FirstNm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[MiddleNm]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="MiddleNm"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[MiddleNm]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[MiddleNm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[LastNm]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="70"
+                      cachedName="LastNm"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[LastNm]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[LastNm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[SuffixNm]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="SuffixNm"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[SuffixNm]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[SuffixNm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[DesignationDesc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="DesignationDesc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[DesignationDesc]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[DesignationDesc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[InformalNm]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="InformalNm"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[InformalNm]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[InformalNm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[JoinDt]"
+                      cachedDataType="dbDate"
+                      cachedName="JoinDt"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[JoinDt]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[JoinDt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[PaidThruDt]"
+                      cachedDataType="dbDate"
+                      cachedName="PaidThruDt"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[PaidThruDt]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PaidThruDt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[ExcludeMailInd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="ExcludeMailInd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[ExcludeMailInd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ExcludeMailInd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[CommitteeNameDesc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="CommitteeNameDesc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CommitteeNameDesc]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CommitteeNameDesc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[LastFirstDesc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="LastFirstDesc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[LastFirstDesc]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[LastFirstDesc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[HomePhoneNbr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="HomePhoneNbr"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[HomePhoneNbr]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[HomePhoneNbr]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[WorkPhoneNbr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="WorkPhoneNbr"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[WorkPhoneNbr]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[WorkPhoneNbr]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[FaxNbr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="FaxNbr"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[FaxNbr]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[FaxNbr]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[CellPhoneNbr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="CellPhoneNbr"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CellPhoneNbr]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CellPhoneNbr]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[EmailAddressDesc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="254"
+                      cachedName="EmailAddressDesc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[EmailAddressDesc]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[EmailAddressDesc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[PreferredCommunicationCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="PreferredCommunicationCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[PreferredCommunicationCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PreferredCommunicationCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[CreatedTmstmp]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedTmstmp"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CreatedTmstmp]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CreatedTmstmp]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[UserCreatedId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="UserCreatedId"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[UserCreatedId]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[UserCreatedId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[UpdatedTmstmp]"
+                      cachedDataType="dbTimeStamp2"
+                      cachedName="UpdatedTmstmp"
+                      cachedScale="7"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[UpdatedTmstmp]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[UpdatedTmstmp]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[UserUpdatedId]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="UserUpdatedId"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[UserUpdatedId]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[UserUpdatedId]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[SourceSystemCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="SourceSystemCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[SourceSystemCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[SourceSystemCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[LastActionCd]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="LastActionCd"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[LastActionCd]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[LastActionCd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].Columns[AlternateEmailAddressInternetDesc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="254"
+                      cachedName="AlternateEmailAddressInternetDesc"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[AlternateEmailAddressInternetDesc]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AlternateEmailAddressInternetDesc]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[MembershipNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="MembershipNbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CategoryCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="CategoryCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[ChapterCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="ChapterCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[MemberTypeCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="MemberTypeCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[StatusCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="StatusCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[EffectiveDt]"
+                      dataType="dbDate"
+                      name="EffectiveDt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[ExpirationDt]"
+                      dataType="dbDate"
+                      name="ExpirationDt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CommitteePositionNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CommitteePositionNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[ComitteeCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="ComitteeCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[ComitteeGroupCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="ComitteeGroupCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[PositionTitleDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PositionTitleDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[PositionRankNbr]"
+                      dataType="i4"
+                      name="PositionRankNbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[StateSenateCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="StateSenateCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[StateHouseCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="StateHouseCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[USCongressCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="USCongressCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[AddressPurposeCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="AddressPurposeCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[AddressCategoryCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="AddressCategoryCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[AddressLine1Desc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="AddressLine1Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[AddressLine2Desc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="AddressLine2Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CityNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="CityNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[StateOrProvinceCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="StateOrProvinceCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[ZipCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="ZipCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CountryCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="CountryCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[FullAddressDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="FullAddressDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[WorkingAreaCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="WorkingAreaCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[MemberDistrictCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="MemberDistrictCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[FullNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="FullNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[GroupNameDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="GroupNameDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[PrefixNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PrefixNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[FirstNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="FirstNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[MiddleNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="MiddleNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[LastNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="70"
+                      name="LastNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[SuffixNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="SuffixNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[DesignationDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="DesignationDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[InformalNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="InformalNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[JoinDt]"
+                      dataType="dbDate"
+                      name="JoinDt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[PaidThruDt]"
+                      dataType="dbDate"
+                      name="PaidThruDt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[ExcludeMailInd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="ExcludeMailInd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CommitteeNameDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CommitteeNameDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[LastFirstDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="LastFirstDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[HomePhoneNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="HomePhoneNbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[WorkPhoneNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="WorkPhoneNbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[FaxNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="FaxNbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CellPhoneNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="CellPhoneNbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[EmailAddressDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="254"
+                      name="EmailAddressDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[PreferredCommunicationCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="PreferredCommunicationCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[CreatedTmstmp]"
+                      dataType="dbTimeStamp"
+                      name="CreatedTmstmp" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[UserCreatedId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="UserCreatedId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[UpdatedTmstmp]"
+                      dataType="dbTimeStamp2"
+                      name="UpdatedTmstmp"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[UserUpdatedId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="UserUpdatedId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[SourceSystemCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="SourceSystemCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[LastActionCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="LastActionCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input].ExternalColumns[AlternateEmailAddressInternetDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="254"
+                      name="AlternateEmailAddressInternetDesc" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination - RankComittee.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - RankComittee.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - RankComittee.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - RankComittee.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - RankComittee"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source - RankComittee"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[RankComittee]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - RankComittee.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[MembershipNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[MembershipNbr]"
+                      length="10"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[MembershipNbr]"
+                      name="MembershipNbr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CategoryCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CategoryCd]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CategoryCd]"
+                      name="CategoryCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ChapterCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[ChapterCd]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ChapterCd]"
+                      name="ChapterCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[MemberTypeCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[MemberTypeCd]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[MemberTypeCd]"
+                      name="MemberTypeCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[StatusCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[StatusCd]"
+                      length="2"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[StatusCd]"
+                      name="StatusCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[EffectiveDt]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[EffectiveDt]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[EffectiveDt]"
+                      name="EffectiveDt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ExpirationDt]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[ExpirationDt]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ExpirationDt]"
+                      name="ExpirationDt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CommitteePositionNm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CommitteePositionNm]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CommitteePositionNm]"
+                      name="CommitteePositionNm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ComitteeCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[ComitteeCd]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ComitteeCd]"
+                      name="ComitteeCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ComitteeGroupCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[ComitteeGroupCd]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ComitteeGroupCd]"
+                      name="ComitteeGroupCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PositionTitleDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[PositionTitleDesc]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PositionTitleDesc]"
+                      name="PositionTitleDesc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PositionRankNbr]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[PositionRankNbr]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PositionRankNbr]"
+                      name="PositionRankNbr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[StateSenateCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[StateSenateCd]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[StateSenateCd]"
+                      name="StateSenateCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[StateHouseCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[StateHouseCd]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[StateHouseCd]"
+                      name="StateHouseCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[USCongressCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[USCongressCd]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[USCongressCd]"
+                      name="USCongressCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AddressPurposeCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[AddressPurposeCd]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AddressPurposeCd]"
+                      name="AddressPurposeCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AddressCategoryCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[AddressCategoryCd]"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AddressCategoryCd]"
+                      name="AddressCategoryCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AddressLine1Desc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[AddressLine1Desc]"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AddressLine1Desc]"
+                      name="AddressLine1Desc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AddressLine2Desc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[AddressLine2Desc]"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AddressLine2Desc]"
+                      name="AddressLine2Desc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CityNm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CityNm]"
+                      length="30"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CityNm]"
+                      name="CityNm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[StateOrProvinceCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[StateOrProvinceCd]"
+                      length="3"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[StateOrProvinceCd]"
+                      name="StateOrProvinceCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ZipCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[ZipCd]"
+                      length="9"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ZipCd]"
+                      name="ZipCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CountryCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CountryCd]"
+                      length="3"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CountryCd]"
+                      name="CountryCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[FullAddressDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[FullAddressDesc]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[FullAddressDesc]"
+                      name="FullAddressDesc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[WorkingAreaCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[WorkingAreaCd]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[WorkingAreaCd]"
+                      name="WorkingAreaCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[MemberDistrictCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[MemberDistrictCd]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[MemberDistrictCd]"
+                      name="MemberDistrictCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[FullNm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[FullNm]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[FullNm]"
+                      name="FullNm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[GroupNameDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[GroupNameDesc]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[GroupNameDesc]"
+                      name="GroupNameDesc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PrefixNm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[PrefixNm]"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PrefixNm]"
+                      name="PrefixNm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[FirstNm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[FirstNm]"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[FirstNm]"
+                      name="FirstNm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[MiddleNm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[MiddleNm]"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[MiddleNm]"
+                      name="MiddleNm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[LastNm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[LastNm]"
+                      length="70"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[LastNm]"
+                      name="LastNm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[SuffixNm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[SuffixNm]"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[SuffixNm]"
+                      name="SuffixNm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[DesignationDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[DesignationDesc]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[DesignationDesc]"
+                      name="DesignationDesc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[InformalNm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[InformalNm]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[InformalNm]"
+                      name="InformalNm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[JoinDt]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[JoinDt]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[JoinDt]"
+                      name="JoinDt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PaidThruDt]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[PaidThruDt]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PaidThruDt]"
+                      name="PaidThruDt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ExcludeMailInd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[ExcludeMailInd]"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[ExcludeMailInd]"
+                      name="ExcludeMailInd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CommitteeNameDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CommitteeNameDesc]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CommitteeNameDesc]"
+                      name="CommitteeNameDesc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[LastFirstDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[LastFirstDesc]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[LastFirstDesc]"
+                      name="LastFirstDesc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[HomePhoneNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[HomePhoneNbr]"
+                      length="16"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[HomePhoneNbr]"
+                      name="HomePhoneNbr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[WorkPhoneNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[WorkPhoneNbr]"
+                      length="16"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[WorkPhoneNbr]"
+                      name="WorkPhoneNbr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[FaxNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[FaxNbr]"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[FaxNbr]"
+                      name="FaxNbr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CellPhoneNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CellPhoneNbr]"
+                      length="16"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CellPhoneNbr]"
+                      name="CellPhoneNbr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[EmailAddressDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[EmailAddressDesc]"
+                      length="254"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[EmailAddressDesc]"
+                      name="EmailAddressDesc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PreferredCommunicationCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[PreferredCommunicationCd]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[PreferredCommunicationCd]"
+                      name="PreferredCommunicationCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CreatedTmstmp]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CreatedTmstmp]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[CreatedTmstmp]"
+                      name="CreatedTmstmp"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[UserCreatedId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[UserCreatedId]"
+                      length="8"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[UserCreatedId]"
+                      name="UserCreatedId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[UpdatedTmstmp]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[UpdatedTmstmp]"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[UpdatedTmstmp]"
+                      name="UpdatedTmstmp"
+                      scale="7"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[UserUpdatedId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[UserUpdatedId]"
+                      length="8"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[UserUpdatedId]"
+                      name="UserUpdatedId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[SourceSystemCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[SourceSystemCd]"
+                      length="2"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[SourceSystemCd]"
+                      name="SourceSystemCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[LastActionCd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[LastActionCd]"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[LastActionCd]"
+                      name="LastActionCd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AlternateEmailAddressInternetDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[AlternateEmailAddressInternetDesc]"
+                      length="254"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].Columns[AlternateEmailAddressInternetDesc]"
+                      name="AlternateEmailAddressInternetDesc"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[MembershipNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="MembershipNbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CategoryCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="CategoryCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[ChapterCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="ChapterCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[MemberTypeCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="MemberTypeCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[StatusCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="StatusCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[EffectiveDt]"
+                      dataType="dbDate"
+                      name="EffectiveDt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[ExpirationDt]"
+                      dataType="dbDate"
+                      name="ExpirationDt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CommitteePositionNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CommitteePositionNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[ComitteeCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="ComitteeCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[ComitteeGroupCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="ComitteeGroupCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[PositionTitleDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PositionTitleDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[PositionRankNbr]"
+                      dataType="i4"
+                      name="PositionRankNbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[StateSenateCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="StateSenateCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[StateHouseCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="StateHouseCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[USCongressCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="USCongressCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[AddressPurposeCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="AddressPurposeCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[AddressCategoryCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="AddressCategoryCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[AddressLine1Desc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="AddressLine1Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[AddressLine2Desc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="AddressLine2Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CityNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="CityNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[StateOrProvinceCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="StateOrProvinceCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[ZipCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="ZipCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CountryCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="CountryCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[FullAddressDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="FullAddressDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[WorkingAreaCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="WorkingAreaCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[MemberDistrictCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="MemberDistrictCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[FullNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="FullNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[GroupNameDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="GroupNameDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[PrefixNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PrefixNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[FirstNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="FirstNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[MiddleNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="MiddleNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[LastNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="70"
+                      name="LastNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[SuffixNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="SuffixNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[DesignationDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="DesignationDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[InformalNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="InformalNm" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[JoinDt]"
+                      dataType="dbDate"
+                      name="JoinDt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[PaidThruDt]"
+                      dataType="dbDate"
+                      name="PaidThruDt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[ExcludeMailInd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="ExcludeMailInd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CommitteeNameDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CommitteeNameDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[LastFirstDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="LastFirstDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[HomePhoneNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="HomePhoneNbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[WorkPhoneNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="WorkPhoneNbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[FaxNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="FaxNbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CellPhoneNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="CellPhoneNbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[EmailAddressDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="254"
+                      name="EmailAddressDesc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[PreferredCommunicationCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="PreferredCommunicationCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[CreatedTmstmp]"
+                      dataType="dbTimeStamp"
+                      name="CreatedTmstmp" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[UserCreatedId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="UserCreatedId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[UpdatedTmstmp]"
+                      dataType="dbTimeStamp2"
+                      name="UpdatedTmstmp"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[UserUpdatedId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="UserUpdatedId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[SourceSystemCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="SourceSystemCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[LastActionCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="LastActionCd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output].ExternalColumns[AlternateEmailAddressInternetDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="254"
+                      name="AlternateEmailAddressInternetDesc" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[MembershipNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[MembershipNbr]"
+                      name="MembershipNbr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CategoryCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CategoryCd]"
+                      name="CategoryCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ChapterCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ChapterCd]"
+                      name="ChapterCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[MemberTypeCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[MemberTypeCd]"
+                      name="MemberTypeCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[StatusCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[StatusCd]"
+                      name="StatusCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[EffectiveDt]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[EffectiveDt]"
+                      name="EffectiveDt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ExpirationDt]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ExpirationDt]"
+                      name="ExpirationDt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CommitteePositionNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CommitteePositionNm]"
+                      name="CommitteePositionNm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ComitteeCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ComitteeCd]"
+                      name="ComitteeCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ComitteeGroupCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ComitteeGroupCd]"
+                      name="ComitteeGroupCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[PositionTitleDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[PositionTitleDesc]"
+                      name="PositionTitleDesc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[PositionRankNbr]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[PositionRankNbr]"
+                      name="PositionRankNbr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[StateSenateCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[StateSenateCd]"
+                      name="StateSenateCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[StateHouseCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[StateHouseCd]"
+                      name="StateHouseCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[USCongressCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[USCongressCd]"
+                      name="USCongressCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[AddressPurposeCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[AddressPurposeCd]"
+                      name="AddressPurposeCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[AddressCategoryCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[AddressCategoryCd]"
+                      name="AddressCategoryCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[AddressLine1Desc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[AddressLine1Desc]"
+                      name="AddressLine1Desc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[AddressLine2Desc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[AddressLine2Desc]"
+                      name="AddressLine2Desc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CityNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CityNm]"
+                      name="CityNm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[StateOrProvinceCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[StateOrProvinceCd]"
+                      name="StateOrProvinceCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ZipCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ZipCd]"
+                      name="ZipCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CountryCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CountryCd]"
+                      name="CountryCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[FullAddressDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[FullAddressDesc]"
+                      name="FullAddressDesc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[WorkingAreaCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[WorkingAreaCd]"
+                      name="WorkingAreaCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[MemberDistrictCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[MemberDistrictCd]"
+                      name="MemberDistrictCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[FullNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[FullNm]"
+                      name="FullNm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[GroupNameDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[GroupNameDesc]"
+                      name="GroupNameDesc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[PrefixNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[PrefixNm]"
+                      name="PrefixNm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[FirstNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[FirstNm]"
+                      name="FirstNm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[MiddleNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[MiddleNm]"
+                      name="MiddleNm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[LastNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="70"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[LastNm]"
+                      name="LastNm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[SuffixNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[SuffixNm]"
+                      name="SuffixNm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[DesignationDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[DesignationDesc]"
+                      name="DesignationDesc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[InformalNm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[InformalNm]"
+                      name="InformalNm" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[JoinDt]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[JoinDt]"
+                      name="JoinDt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[PaidThruDt]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[PaidThruDt]"
+                      name="PaidThruDt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ExcludeMailInd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ExcludeMailInd]"
+                      name="ExcludeMailInd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CommitteeNameDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CommitteeNameDesc]"
+                      name="CommitteeNameDesc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[LastFirstDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[LastFirstDesc]"
+                      name="LastFirstDesc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[HomePhoneNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[HomePhoneNbr]"
+                      name="HomePhoneNbr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[WorkPhoneNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[WorkPhoneNbr]"
+                      name="WorkPhoneNbr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[FaxNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[FaxNbr]"
+                      name="FaxNbr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CellPhoneNbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CellPhoneNbr]"
+                      name="CellPhoneNbr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[EmailAddressDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="254"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[EmailAddressDesc]"
+                      name="EmailAddressDesc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[AlternateEmailAddressInternetDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="254"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[AlternateEmailAddressInternetDesc]"
+                      name="AlternateEmailAddressInternetDesc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[PreferredCommunicationCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[PreferredCommunicationCd]"
+                      name="PreferredCommunicationCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CreatedTmstmp]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[CreatedTmstmp]"
+                      name="CreatedTmstmp" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[UserCreatedId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[UserCreatedId]"
+                      name="UserCreatedId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[UpdatedTmstmp]"
+                      dataType="dbTimeStamp2"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[UpdatedTmstmp]"
+                      name="UpdatedTmstmp"
+                      scale="7" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[UserUpdatedId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[UserUpdatedId]"
+                      name="UserUpdatedId" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[SourceSystemCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[SourceSystemCd]"
+                      name="SourceSystemCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[LastActionCd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[LastActionCd]"
+                      name="LastActionCd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task 1\Destination - RankComittee.Inputs[Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 1\Source - RankComittee.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Preparation SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{28922C8F-7603-45D2-9194-ED7A4BED537A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Preparation SQL Task 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{939D0AFD-EB4E-49B4-A690-87AD623E223A}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[RankComittee]&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{4BB70F6A-59F6-42EB-BEEE-6216EFF5C7CA\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{4BB70F6A-59F6-42EB-BEEE-6216EFF5C7CA}"
+      DTS:From="Package\Preparation SQL Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{4BB70F6A-59F6-42EB-BEEE-6216EFF5C7CA}"
+      DTS:To="Package\Data Flow Task 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Data Flow Task 1"
+          TopLeft="20.5,107.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Preparation SQL Task 1"
+          TopLeft="3.50000000000001,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{4BB70F6A-59F6-42EB-BEEE-6216EFF5C7CA\}]"
+          TopLeft="99.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Data Flow Task 1\Source - RankComittee"
+          TopLeft="16,5.5" />
+        <NodeLayout
+          Size="208,42"
+          Id="Package\Data Flow Task 1\Destination - RankComittee"
+          TopLeft="5.50000000000001,107.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+          TopLeft="109.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\Destination - RankComittee">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\Source - RankComittee">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

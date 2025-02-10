@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSIS", "SSIS.dtproj", "{5DC45016-882C-4518-A2F6-638101CA2747}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = $/CC/Version8/SQL-Dev/SSIS
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Team\u0020Foundation\u0020Server\u0020MSSCCI\u0020Provider
+		SccProjectUniqueName1 = SSIS.dtproj
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DC45016-882C-4518-A2F6-638101CA2747}.Development|Default.ActiveCfg = Development
+		{5DC45016-882C-4518-A2F6-638101CA2747}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
